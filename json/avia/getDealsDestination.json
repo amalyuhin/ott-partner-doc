@@ -1,0 +1,110 @@
+{
+  "swagger": "2.0",
+  "host": "ott-partner.dev.roowix.com",
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "info": {
+    "description": "Поиск городов и стран",
+    "title": "Get Deals Destination",
+    "version": "0.0.1",
+    "termsOfService": "http://example.com/about/terms",
+    "contact": {
+      "name": "API Docs",
+      "url": "http://example.com/contact",
+      "email": "apidocs@example.com"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://example.com"
+    }
+  },
+  "basePath": "/_api/avia/getDealsDestination",
+  "paths": {
+    "/": {
+      "get": {
+        "description": "Поиск городов и стран",
+        "summary": "Поиск городов и стран",
+        "externalDocs": {
+          "description": "Find out more",
+          "url": "http://docs.example.com/management/apis/get/entities"
+        },
+        "operationId": "getDealsDestination",
+        "tags": [
+          "avia"
+        ],
+        "produces": [
+          "application/json; charset=utf-8"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "description": "",
+              "type": "object",
+              "properties": {
+                "result": {
+                  "type": "array",
+                  "uniqueItems": true,
+                  "minItems": 1,
+                  "items": {
+                    "required": [
+                      "type",
+                      "name",
+                      "code"
+                    ],
+                    "properties": {
+                      "type": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "name": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "code": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    }
+                  }
+                },
+                "success": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "result",
+                "success"
+              ]
+            }
+          }
+        },
+        "security": [],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "query",
+            "description": "Строка на основании которой происходит поиск Городов и стран",
+            "type": "string",
+            "required": true,
+            "enum": [
+              "RU"
+            ]
+          },
+          {
+            "in": "query",
+            "name": "limit",
+            "description": "Лимит возвращаемых результатов",
+            "type": "number",
+            "required": false,
+            "enum": [
+              "10"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,665 @@
+{
+  "swagger": "2.0",
+  "host": "ott-partner.dev.roowix.com",
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "info": {
+    "description": "API Program description",
+    "title": "/_api/searching/startSync",
+    "version": "0.0.1",
+    "termsOfService": "http://example.com/about/terms",
+    "contact": {
+      "name": "Denis",
+      "url": "http://example.com/contact",
+      "email": "apidocs@example.com"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://example.com"
+    }
+  },
+  "basePath": "/_api/searching/startSync",
+  "paths": {
+    "/": {
+      "get": {
+        "description": "Поиск авиабилетов",
+        "summary": "Поиск авиабилетов",
+        "externalDocs": {
+          "description": "Find out more",
+          "url": "http://docs.example.com/management/apis/get/entities"
+        },
+        "operationId": "search",
+        "tags": [
+          "api2swagger"
+        ],
+        "produces": [
+          "application/json; charset=utf-8"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "description": "",
+              "type": "object",
+              "properties": {
+                "status": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "data": {
+                  "type": "object",
+                  "properties": {
+                    "frs": {
+                      "type": "array",
+                      "uniqueItems": true,
+                      "minItems": 1,
+                      "items": {
+                        "required": [
+                          "price",
+                          "currency",
+                          "airCmp",
+                          "key",
+                          "url",
+                          "urlMob",
+                          "id"
+                        ],
+                        "properties": {
+                          "dirs": {
+                            "type": "array",
+                            "uniqueItems": true,
+                            "minItems": 1,
+                            "items": {
+                              "properties": {
+                                "trips": {
+                                  "type": "array",
+                                  "uniqueItems": true,
+                                  "minItems": 1,
+                                  "items": {
+                                    "required": [
+                                      "key",
+                                      "airCmp",
+                                      "fltNm",
+                                      "from",
+                                      "to",
+                                      "startDate",
+                                      "endDate",
+                                      "isDeparture",
+                                      "directionId",
+                                      "jrnTm",
+                                      "basis",
+                                      "plane"
+                                    ],
+                                    "properties": {
+                                      "key": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "airCmp": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "fltNm": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "from": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "to": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "startDate": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "endDate": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "isDeparture": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "directionId": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "jrnTm": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "basis": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "plane": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "price": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "currency": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "airCmp": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "key": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "url": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "urlMob": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "id": {
+                            "type": "number"
+                          }
+                        }
+                      }
+                    },
+                    "airlines": {
+                      "type": "object",
+                      "properties": {
+                        "NN": {
+                          "type": "object",
+                          "properties": {
+                            "name": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "name"
+                          ]
+                        },
+                        "DP": {
+                          "type": "object",
+                          "properties": {
+                            "name": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "name"
+                          ]
+                        },
+                        "6R": {
+                          "type": "object",
+                          "properties": {
+                            "name": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "name"
+                          ]
+                        },
+                        "U6": {
+                          "type": "object",
+                          "properties": {
+                            "name": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "name"
+                          ]
+                        },
+                        "S7": {
+                          "type": "object",
+                          "properties": {
+                            "name": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "name"
+                          ]
+                        },
+                        "SU": {
+                          "type": "object",
+                          "properties": {
+                            "name": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "name"
+                          ]
+                        },
+                        "UT": {
+                          "type": "object",
+                          "properties": {
+                            "name": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "name"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "NN",
+                        "DP",
+                        "6R",
+                        "U6",
+                        "S7",
+                        "SU",
+                        "UT"
+                      ]
+                    },
+                    "airports": {
+                      "type": "object",
+                      "properties": {
+                        "OVB": {
+                          "type": "object",
+                          "properties": {
+                            "city": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "country": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "name": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "city",
+                            "country",
+                            "name"
+                          ]
+                        },
+                        "DME": {
+                          "type": "object",
+                          "properties": {
+                            "city": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "country": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "name": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "city",
+                            "country",
+                            "name"
+                          ]
+                        },
+                        "VKO": {
+                          "type": "object",
+                          "properties": {
+                            "city": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "country": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "name": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "city",
+                            "country",
+                            "name"
+                          ]
+                        },
+                        "SVO": {
+                          "type": "object",
+                          "properties": {
+                            "city": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "country": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "name": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "city",
+                            "country",
+                            "name"
+                          ]
+                        },
+                        "SVX": {
+                          "type": "object",
+                          "properties": {
+                            "city": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "country": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "name": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "city",
+                            "country",
+                            "name"
+                          ]
+                        },
+                        "TJM": {
+                          "type": "object",
+                          "properties": {
+                            "city": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "country": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "name": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "city",
+                            "country",
+                            "name"
+                          ]
+                        },
+                        "LED": {
+                          "type": "object",
+                          "properties": {
+                            "city": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "country": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "name": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "city",
+                            "country",
+                            "name"
+                          ]
+                        },
+                        "SGC": {
+                          "type": "object",
+                          "properties": {
+                            "city": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "country": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "name": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "city",
+                            "country",
+                            "name"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "OVB",
+                        "DME",
+                        "VKO",
+                        "SVO",
+                        "SVX",
+                        "TJM",
+                        "LED",
+                        "SGC"
+                      ]
+                    },
+                    "cities": {
+                      "type": "object",
+                      "properties": {
+                        "OVB": {
+                          "type": "object",
+                          "properties": {
+                            "country": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "name": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "country",
+                            "name"
+                          ]
+                        },
+                        "MOW": {
+                          "type": "object",
+                          "properties": {
+                            "country": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "name": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "country",
+                            "name"
+                          ]
+                        },
+                        "SVX": {
+                          "type": "object",
+                          "properties": {
+                            "country": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "name": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "country",
+                            "name"
+                          ]
+                        },
+                        "TJM": {
+                          "type": "object",
+                          "properties": {
+                            "country": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "name": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "country",
+                            "name"
+                          ]
+                        },
+                        "LED": {
+                          "type": "object",
+                          "properties": {
+                            "country": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "name": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "country",
+                            "name"
+                          ]
+                        },
+                        "SGC": {
+                          "type": "object",
+                          "properties": {
+                            "country": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "name": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "country",
+                            "name"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "OVB",
+                        "MOW",
+                        "SVX",
+                        "TJM",
+                        "LED",
+                        "SGC"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "frs",
+                    "airlines",
+                    "airports",
+                    "cities"
+                  ]
+                }
+              },
+              "required": [
+                "status",
+                "data"
+              ]
+            }
+          }
+        },
+        "security": [],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "ad",
+            "description": "adult - взрослые",
+            "type": "number",
+            "required": true,
+            "enum": [
+              "1"
+            ]
+          },
+          {
+            "in": "query",
+            "name": "cn",
+            "description": "children (кол-во детей до 12-ти лет)",
+            "type": "number",
+            "required": true,
+            "enum": [
+              "0"
+            ]
+          },
+          {
+            "in": "query",
+            "name": "cs",
+            "description": "класс бронирования, E - эконом, B - бизнесс, W - премиум эконом, F - первый",
+            "type": "string",
+            "required": true,
+            "enum": [
+              "E"
+            ]
+          },
+          {
+            "in": "query",
+            "name": "in",
+            "description": "infants (кол-во детей до 2-х лет)",
+            "type": "number",
+            "required": true,
+            "enum": [
+              "0"
+            ]
+          },
+          {
+            "in": "query",
+            "name": "marker",
+            "description": "маркер",
+            "type": "string",
+            "required": true,
+            "enum": [
+              "1-2686-0-2"
+            ]
+          },
+          {
+            "in": "query",
+            "name": "route",
+            "description": "дата вылета - откуда - куда - дата прилета",
+            "type": "string",
+            "required": true,
+            "enum": [
+              "2904OVBMOW0605MOWOVB"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

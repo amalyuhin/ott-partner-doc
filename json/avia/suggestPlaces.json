@@ -1,0 +1,124 @@
+{
+  "swagger": "2.0",
+  "host": "ott-partner.dev.roowix.com",
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "info": {
+    "description": "API Program description",
+    "title": "Suggest Places",
+    "version": "0.0.1",
+    "termsOfService": "http://example.com/about/terms",
+    "contact": {
+      "name": "Denis",
+      "url": "http://example.com/contact",
+      "email": "apidocs@example.com"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://example.com"
+    }
+  },
+  "basePath": "/_api/avia/suggestPlaces",
+  "paths": {
+    "/": {
+      "get": {
+        "description": "Suggest Places",
+        "summary": "Поиск городов или аэропортов",
+        "externalDocs": {
+          "description": "Find out more",
+          "url": "http://docs.example.com/management/apis/get/entities"
+        },
+        "operationId": "suggestPlaces",
+        "tags": [
+          "api2swagger"
+        ],
+        "produces": [
+          "application/json; charset=utf-8"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "description": "",
+              "type": "object",
+              "properties": {
+                "result": {
+                  "type": "array",
+                  "uniqueItems": true,
+                  "minItems": 10,
+                  "items": {
+                    "required": [
+                      "value",
+                      "label"
+                    ],
+                    "properties": {
+                      "value": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "label": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "city": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "country": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    }
+                  }
+                },
+                "success": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "result",
+                "success"
+              ]
+            }
+          }
+        },
+        "security": [],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "query",
+            "description": "Строка на основании которой происходит поиск по городам и аэропортам",
+            "type": "string",
+            "required": true,
+            "enum": [
+              "mos"
+            ]
+          },
+          {
+            "in": "query",
+            "name": "lang",
+            "description": "Язык для отображения результатов запроса (проверены en ru)",
+            "type": "string",
+            "required": false,
+            "enum": [
+              "en",
+              " ru"
+            ]
+          },
+          {
+            "in": "query",
+            "name": "limit",
+            "description": "Лимит на возрат результатов",
+            "type": "number",
+            "required": false,
+            "enum": [
+              "10"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

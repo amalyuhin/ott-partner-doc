@@ -1,0 +1,24 @@
+{
+  "name": "ott-partner-doc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "compile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amalyuhin/ott-partner-doc.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amalyuhin/ott-partner-doc/issues"
+  },
+  "homepage": "https://github.com/amalyuhin/ott-partner-doc#readme",
+  "dependencies": {
+    "glob": "^7.1.1",
+    "mkdirp": "^0.5.1",
+    "yamljs": "^0.2.8"
+  }
+}

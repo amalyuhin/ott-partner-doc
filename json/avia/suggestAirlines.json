@@ -1,0 +1,105 @@
+{
+  "swagger": "2.0",
+  "host": "ott-partner.dev.roowix.com",
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "info": {
+    "description": "Поиск авиакомпаний",
+    "title": "Suggest Airlines",
+    "version": "0.0.1",
+    "termsOfService": "http://example.com/about/terms",
+    "contact": {
+      "name": "API Docs",
+      "url": "http://example.com/contact",
+      "email": "apidocs@example.com"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://example.com"
+    }
+  },
+  "basePath": "/_api/avia/suggestAirlines",
+  "paths": {
+    "/": {
+      "get": {
+        "description": "Поиск авиакомпаний",
+        "summary": "Поиск авиакомпаний",
+        "externalDocs": {
+          "description": "Find out more",
+          "url": "http://docs.example.com/management/apis/get/entities"
+        },
+        "operationId": "suggestAirlines",
+        "tags": [
+          "avia"
+        ],
+        "produces": [
+          "application/json; charset=utf-8"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "description": "",
+              "type": "object",
+              "properties": {
+                "result": {
+                  "type": "array",
+                  "uniqueItems": true,
+                  "minItems": 1,
+                  "items": {
+                    "required": [
+                      "value",
+                      "label"
+                    ],
+                    "properties": {
+                      "value": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "label": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    }
+                  }
+                },
+                "success": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "result",
+                "success"
+              ]
+            }
+          }
+        },
+        "security": [],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "query",
+            "description": "Строка по которой будет произведен поиск по авиакомпаниям",
+            "type": "string",
+            "required": true,
+            "enum": [
+              "aero"
+            ]
+          },
+          {
+            "in": "query",
+            "name": "limit",
+            "description": "Лимит возвращаемых значений (по умолчанию 10)",
+            "type": "number",
+            "required": false,
+            "enum": [
+              "10"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "swagger": "2.0",
+  "host": "ott-partner.dev.roowix.com",
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "info": {
+    "description": "Получить город по коду (пример MOS - Москва)",
+    "title": "Get Avia Place",
+    "version": "0.0.1",
+    "termsOfService": "http://example.com/about/terms",
+    "contact": {
+      "name": "Denis",
+      "url": "http://example.com/contact",
+      "email": "apidocs@example.com"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://example.com"
+    }
+  },
+  "basePath": "/_api/avia/getAviaPlace",
+  "paths": {
+    "/": {
+      "get": {
+        "description": "Получить город по коду (пример MOW - Москва)",
+        "summary": "Получить город по коду (пример MOW - Москва)",
+        "externalDocs": {
+          "description": "Find out more",
+          "url": "http://docs.example.com/management/apis/get/entities"
+        },
+        "operationId": "getAviaPlace",
+        "tags": [
+          "avia"
+        ],
+        "produces": [
+          "application/json; charset=utf-8"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "description": "",
+              "type": "object",
+              "properties": {
+                "result": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "label": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "country": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "value",
+                    "label",
+                    "country"
+                  ]
+                },
+                "success": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "result",
+                "success"
+              ]
+            }
+          }
+        },
+        "security": [],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "code",
+            "description": "Код города в формате IATA пример MOW - Москва",
+            "type": "string",
+            "required": true,
+            "enum": [
+              "MOW"
+            ]
+          },
+          {
+            "in": "query",
+            "name": "lang",
+            "description": "Язык для перевода возвращаемого результата",
+            "type": "string",
+            "required": false,
+            "enum": [
+              "en"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
