@@ -38,7 +38,6 @@ function makeAllDocs() {
         var itemCount = 0;
         files.forEach(function (file) {
             var data = require(path.resolve(__dirname, file));
-            console.log(file);
             if (itemCount == 0) {
                 allDocs = data;
             }

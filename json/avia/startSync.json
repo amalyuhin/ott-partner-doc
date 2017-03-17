@@ -6,8 +6,8 @@
     "https"
   ],
   "info": {
-    "description": "API Program description",
-    "title": "/_api/searching/startSync",
+    "description": "Документация по методам для работы с OTT",
+    "title": "API документация для OTT",
     "version": "0.0.1",
     "termsOfService": "http://example.com/about/terms",
     "contact": {
@@ -32,7 +32,7 @@
         },
         "operationId": "search",
         "tags": [
-          "api2swagger"
+          "avia"
         ],
         "produces": [
           "application/json; charset=utf-8"

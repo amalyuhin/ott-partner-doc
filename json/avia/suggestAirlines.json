@@ -6,12 +6,12 @@
     "https"
   ],
   "info": {
-    "description": "Поиск авиакомпаний",
-    "title": "Suggest Airlines",
+    "description": "Документация по методам для работы с OTT",
+    "title": "API документация для OTT",
     "version": "0.0.1",
     "termsOfService": "http://example.com/about/terms",
     "contact": {
-      "name": "API Docs",
+      "name": "Denis",
       "url": "http://example.com/contact",
       "email": "apidocs@example.com"
     },
@@ -22,7 +22,7 @@
   },
   "basePath": "/",
   "paths": {
-    "/_api/avia/suggestAirlines": {
+    "/": {
       "get": {
         "description": "Поиск авиакомпаний",
         "summary": "Поиск авиакомпаний",

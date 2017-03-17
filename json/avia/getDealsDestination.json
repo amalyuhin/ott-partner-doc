@@ -6,12 +6,12 @@
     "https"
   ],
   "info": {
-    "description": "Поиск городов и стран",
-    "title": "Get Deals Destination",
+    "description": "Документация по методам для работы с OTT",
+    "title": "API документация для OTT",
     "version": "0.0.1",
     "termsOfService": "http://example.com/about/terms",
     "contact": {
-      "name": "API Docs",
+      "name": "Denis",
       "url": "http://example.com/contact",
       "email": "apidocs@example.com"
     },

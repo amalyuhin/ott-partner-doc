@@ -6,8 +6,8 @@
     "https"
   ],
   "info": {
-    "description": "Получить город по коду (пример MOS - Москва)",
-    "title": "Get Avia Place",
+    "description": "Документация по методам для работы с OTT",
+    "title": "API документация для OTT",
     "version": "0.0.1",
     "termsOfService": "http://example.com/about/terms",
     "contact": {
