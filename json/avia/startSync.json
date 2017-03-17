@@ -20,9 +20,9 @@
       "url": "http://example.com"
     }
   },
-  "basePath": "/_api/searching/startSync",
+  "basePath": "/",
   "paths": {
-    "/": {
+    "/_api/searching/startSync": {
       "get": {
         "description": "Поиск авиабилетов",
         "summary": "Поиск авиабилетов",

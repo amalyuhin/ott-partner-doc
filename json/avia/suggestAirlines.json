@@ -20,9 +20,9 @@
       "url": "http://example.com"
     }
   },
-  "basePath": "/_api/avia/suggestAirlines",
+  "basePath": "/",
   "paths": {
-    "/": {
+    "/_api/avia/suggestAirlines": {
       "get": {
         "description": "Поиск авиакомпаний",
         "summary": "Поиск авиакомпаний",

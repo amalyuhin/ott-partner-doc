@@ -20,9 +20,9 @@
       "url": "http://example.com"
     }
   },
-  "basePath": "/_api/avia/getDealsDestination",
+  "basePath": "/",
   "paths": {
-    "/": {
+    "/_api/avia/getDealsDestination": {
       "get": {
         "description": "Поиск городов и стран",
         "summary": "Поиск городов и стран",

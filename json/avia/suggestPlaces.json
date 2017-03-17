@@ -20,9 +20,9 @@
       "url": "http://example.com"
     }
   },
-  "basePath": "/_api/avia/suggestPlaces",
+  "basePath": "/",
   "paths": {
-    "/": {
+    "/_api/avia/suggestPlaces": {
       "get": {
         "description": "Suggest Places",
         "summary": "Поиск городов или аэропортов",
