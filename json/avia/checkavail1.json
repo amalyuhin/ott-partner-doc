@@ -22,15 +22,15 @@
   },
   "basePath": "/",
   "paths": {
-    "/wl_api/process/startcreateorder/": {
+    "/wl_api/confirmation/checkavail1/": {
       "post": {
-        "description": "Запрос на создание заказа",
-        "summary": "Запрос на создание заказа",
+        "description": "Запрос на создание брони выбранного перелета (в метод так же отправляются данные пассажира и email и номер телефона заказчика)",
+        "summary": "Запрос на создание брони выбранного перелета",
         "externalDocs": {
           "description": "Find out more",
           "url": "http://docs.example.com/management/apis/get/entities"
         },
-        "operationId": "startcreateorder",
+        "operationId": "checkavail1",
         "tags": [
           "avia"
         ],
@@ -44,18 +44,32 @@
               "description": "",
               "type": "object",
               "properties": {
+                "avail": {
+                  "type": "boolean"
+                },
+                "id": {
+                  "type": "string",
+                  "minLength": 1
+                },
                 "status": {
                   "type": "string",
                   "minLength": 1
                 },
-                "processId": {
+                "additionalServicesStatus": {
+                  "type": "object",
+                  "properties": {}
+                },
+                "createdAt": {
                   "type": "string",
                   "minLength": 1
                 }
               },
               "required": [
+                "avail",
+                "id",
                 "status",
-                "processId"
+                "additionalServicesStatus",
+                "createdAt"
               ]
             }
           }
@@ -85,7 +99,7 @@
           {
             "in": "formData",
             "name": "params",
-            "description": "Принимает параметр `params`, который является json-строкой (содержит информацию о пассажирах, методе оплаты и дынных карты)",
+            "description": "Принимает параметр `params`, который является json-строкой",
             "type": "string",
             "required": true
           }
