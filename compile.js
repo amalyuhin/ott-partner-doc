@@ -6,10 +6,7 @@ var yamljs = require('yamljs');
 var mkdirp = require('mkdirp');
 
 
-
-if(makeAllDocs()) {
-    json2yml();
-}
+makeAllDocs();
 
 function json2yml() {
     glob( 'json/**/*.json', function( err, files ) {
@@ -46,6 +43,7 @@ function makeAllDocs() {
             }
             itemCount++;
         });
+        clear();
         mkdirp('./json/avia/allDocs', function (err) {
             if (err) {
                 success = false;
@@ -58,6 +56,7 @@ function makeAllDocs() {
                     return console.error(err);
                 }
                 console.log('successful for all docs');
+                json2yml();
             });
         });
 
@@ -74,3 +73,23 @@ function makeAllDocs() {
     return success;
 }
 
+
+function clear() {
+    deleteFolderRecursive('./json/avia/allDocs');
+    deleteFolderRecursive('./yml');
+}
+
+function deleteFolderRecursive(path) {
+    if( fs.existsSync(path) ) {
+        fs.readdirSync(path).forEach(function(file,index){
+            var curPath = path + "/" + file;
+            if(fs.lstatSync(curPath).isDirectory()) { // recurse
+                deleteFolderRecursive(curPath);
+            } else {
+                fs.unlinkSync(curPath);
+            }
+        });
+        fs.rmdirSync(path);
+        console.log(path + ' deleted');
+    }
+};

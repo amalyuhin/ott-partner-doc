@@ -1,0 +1,5007 @@
+{
+  "swagger": "2.0",
+  "host": "ott-partner.dev.roowix.com",
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "info": {
+    "description": "Документация по методам для работы с OTT",
+    "title": "API документация для OTT",
+    "version": "0.0.1",
+    "termsOfService": "http://example.com/about/terms",
+    "contact": {
+      "name": "Denis",
+      "url": "http://example.com/contact",
+      "email": "apidocs@example.com"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://example.com"
+    }
+  },
+  "basePath": "/",
+  "paths": {
+    "/wl_api/confirmation/getcheckavailresult1/": {
+      "get": {
+        "description": "Запрос на получение информации о брони по ее id",
+        "summary": "Запрос на получение информации о брони по ее id",
+        "externalDocs": {
+          "description": "Find out more",
+          "url": "http://docs.example.com/management/apis/get/entities"
+        },
+        "operationId": "uniqueId",
+        "tags": [
+          "api2swagger"
+        ],
+        "produces": [
+          "application/json; charset=UTF-8"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "description": "",
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "avail": {
+                  "type": "boolean"
+                },
+                "trps": {
+                  "type": "array",
+                  "uniqueItems": true,
+                  "minItems": 1,
+                  "items": {
+                    "required": [
+                      "id",
+                      "airCmp",
+                      "fltNm",
+                      "cls",
+                      "stDt",
+                      "from",
+                      "to",
+                      "conx",
+                      "stTrm",
+                      "endTrm",
+                      "fltTm",
+                      "miles",
+                      "jrnTm",
+                      "plane",
+                      "oprdBy",
+                      "stTm",
+                      "endTm",
+                      "srvCls",
+                      "fic",
+                      "planeStr",
+                      "bg",
+                      "endDate",
+                      "confrm",
+                      "eTkAvail",
+                      "startDateTime",
+                      "endDateTime",
+                      "age",
+                      "stars",
+                      "key",
+                      "stAvl",
+                      "brandId",
+                      "cbg",
+                      "nvb",
+                      "nva",
+                      "status",
+                      "segNum"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "number"
+                      },
+                      "airCmp": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "fltNm": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "cls": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "stDt": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "from": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "to": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "conx": {
+                        "type": "boolean"
+                      },
+                      "stTrm": {
+                        "type": "string"
+                      },
+                      "endTrm": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "fltTm": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "miles": {
+                        "type": "number"
+                      },
+                      "jrnTm": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "plane": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "oprdBy": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "stTm": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "endTm": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "srvCls": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "fic": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "planeStr": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "bg": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "endDate": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "confrm": {
+                        "type": "boolean"
+                      },
+                      "eTkAvail": {
+                        "type": "boolean"
+                      },
+                      "startDateTime": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "endDateTime": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "age": {
+                        "type": "number"
+                      },
+                      "stars": {
+                        "type": "number"
+                      },
+                      "flightInfo": {
+                        "type": "object",
+                        "properties": {
+                          "ages": {
+                            "type": "object",
+                            "properties": {
+                              "stars": {
+                                "type": "number"
+                              },
+                              "value": {
+                                "type": "number"
+                              }
+                            },
+                            "required": [
+                              "stars",
+                              "value"
+                            ]
+                          },
+                          "delay": {
+                            "type": "object",
+                            "properties": {
+                              "stars": {
+                                "type": "number"
+                              },
+                              "value": {
+                                "type": "number"
+                              }
+                            },
+                            "required": [
+                              "stars",
+                              "value"
+                            ]
+                          },
+                          "delay15": {
+                            "type": "object",
+                            "properties": {
+                              "value": {
+                                "type": "number"
+                              },
+                              "stars": {
+                                "type": "number"
+                              }
+                            },
+                            "required": [
+                              "value",
+                              "stars"
+                            ]
+                          },
+                          "delay30": {
+                            "type": "object",
+                            "properties": {
+                              "value": {
+                                "type": "number"
+                              },
+                              "stars": {
+                                "type": "number"
+                              }
+                            },
+                            "required": [
+                              "value",
+                              "stars"
+                            ]
+                          },
+                          "late": {
+                            "type": "object",
+                            "properties": {
+                              "stars": {
+                                "type": "number"
+                              },
+                              "value": {
+                                "type": "number"
+                              }
+                            },
+                            "required": [
+                              "stars",
+                              "value"
+                            ]
+                          },
+                          "cancelled": {
+                            "type": "object",
+                            "properties": {
+                              "stars": {
+                                "type": "number"
+                              },
+                              "value": {
+                                "type": "number"
+                              }
+                            },
+                            "required": [
+                              "stars",
+                              "value"
+                            ]
+                          },
+                          "seatsmaxPE": {
+                            "type": "object",
+                            "properties": {
+                              "value": {
+                                "type": "number"
+                              },
+                              "stars": {
+                                "type": "number"
+                              }
+                            },
+                            "required": [
+                              "value",
+                              "stars"
+                            ]
+                          },
+                          "seatsmaxPB": {
+                            "type": "object",
+                            "properties": {
+                              "value": {
+                                "type": "number"
+                              },
+                              "stars": {
+                                "type": "number"
+                              }
+                            },
+                            "required": [
+                              "value",
+                              "stars"
+                            ]
+                          },
+                          "seatsminPB": {
+                            "type": "object",
+                            "properties": {
+                              "value": {
+                                "type": "number"
+                              },
+                              "stars": {
+                                "type": "number"
+                              }
+                            },
+                            "required": [
+                              "value",
+                              "stars"
+                            ]
+                          },
+                          "seatsminPE": {
+                            "type": "object",
+                            "properties": {
+                              "value": {
+                                "type": "number"
+                              },
+                              "stars": {
+                                "type": "number"
+                              }
+                            },
+                            "required": [
+                              "value",
+                              "stars"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "ages",
+                          "delay",
+                          "delay15",
+                          "delay30",
+                          "late",
+                          "cancelled",
+                          "seatsmaxPE",
+                          "seatsmaxPB",
+                          "seatsminPB",
+                          "seatsminPE"
+                        ]
+                      },
+                      "key": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "stAvl": {
+                        "type": "number"
+                      },
+                      "brandId": {
+                        "type": "number"
+                      },
+                      "cbg": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "nvb": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "nva": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "status": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "segNum": {
+                        "type": "number"
+                      }
+                    }
+                  }
+                },
+                "gdsInf": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "currencies": {
+                  "type": "object",
+                  "properties": {
+                    "USDEUR": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "USDRUB": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "USDUAH": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "USDAZN": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "USDTRY": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "USDGBP": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "USDKZT": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "USDPLN": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "EURUSD": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "EURRUB": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "EURUAH": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "EURAZN": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "EURTRY": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "EURGBP": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "EURKZT": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "EURPLN": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "RUBUSD": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "RUBEUR": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "RUBUAH": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "RUBAZN": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "RUBTRY": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "RUBGBP": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "RUBKZT": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "RUBPLN": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "UAHUSD": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "UAHEUR": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "UAHRUB": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "UAHAZN": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "UAHTRY": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "UAHGBP": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "UAHKZT": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "UAHPLN": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "AZNUSD": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "AZNEUR": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "AZNRUB": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "AZNUAH": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "AZNTRY": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "AZNGBP": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "AZNKZT": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "AZNPLN": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "TRYUSD": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "TRYEUR": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "TRYRUB": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "TRYUAH": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "TRYAZN": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "TRYGBP": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "TRYKZT": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "TRYPLN": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "GBPUSD": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "GBPEUR": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "GBPRUB": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "GBPUAH": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "GBPAZN": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "GBPTRY": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "GBPKZT": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "GBPPLN": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "KZTUSD": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "KZTEUR": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "KZTRUB": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "KZTUAH": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "KZTAZN": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "KZTTRY": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "KZTGBP": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "KZTPLN": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "PLNUSD": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "PLNEUR": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "PLNRUB": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "PLNUAH": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "PLNAZN": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "PLNTRY": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "PLNGBP": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "PLNKZT": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "USDEUR",
+                    "USDRUB",
+                    "USDUAH",
+                    "USDAZN",
+                    "USDTRY",
+                    "USDGBP",
+                    "USDKZT",
+                    "USDPLN",
+                    "EURUSD",
+                    "EURRUB",
+                    "EURUAH",
+                    "EURAZN",
+                    "EURTRY",
+                    "EURGBP",
+                    "EURKZT",
+                    "EURPLN",
+                    "RUBUSD",
+                    "RUBEUR",
+                    "RUBUAH",
+                    "RUBAZN",
+                    "RUBTRY",
+                    "RUBGBP",
+                    "RUBKZT",
+                    "RUBPLN",
+                    "UAHUSD",
+                    "UAHEUR",
+                    "UAHRUB",
+                    "UAHAZN",
+                    "UAHTRY",
+                    "UAHGBP",
+                    "UAHKZT",
+                    "UAHPLN",
+                    "AZNUSD",
+                    "AZNEUR",
+                    "AZNRUB",
+                    "AZNUAH",
+                    "AZNTRY",
+                    "AZNGBP",
+                    "AZNKZT",
+                    "AZNPLN",
+                    "TRYUSD",
+                    "TRYEUR",
+                    "TRYRUB",
+                    "TRYUAH",
+                    "TRYAZN",
+                    "TRYGBP",
+                    "TRYKZT",
+                    "TRYPLN",
+                    "GBPUSD",
+                    "GBPEUR",
+                    "GBPRUB",
+                    "GBPUAH",
+                    "GBPAZN",
+                    "GBPTRY",
+                    "GBPKZT",
+                    "GBPPLN",
+                    "KZTUSD",
+                    "KZTEUR",
+                    "KZTRUB",
+                    "KZTUAH",
+                    "KZTAZN",
+                    "KZTTRY",
+                    "KZTGBP",
+                    "KZTPLN",
+                    "PLNUSD",
+                    "PLNEUR",
+                    "PLNRUB",
+                    "PLNUAH",
+                    "PLNAZN",
+                    "PLNTRY",
+                    "PLNGBP",
+                    "PLNKZT"
+                  ]
+                },
+                "rates": {
+                  "type": "object",
+                  "properties": {
+                    "USDEUR": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "USDRUB": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "USDUAH": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "USDAZN": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "USDTRY": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "USDGBP": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "USDKZT": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "USDPLN": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "EURUSD": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "EURRUB": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "EURUAH": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "EURAZN": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "EURTRY": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "EURGBP": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "EURKZT": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "EURPLN": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "RUBUSD": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "RUBEUR": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "RUBUAH": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "RUBAZN": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "RUBTRY": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "RUBGBP": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "RUBKZT": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "RUBPLN": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "UAHUSD": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "UAHEUR": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "UAHRUB": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "UAHAZN": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "UAHTRY": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "UAHGBP": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "UAHKZT": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "UAHPLN": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "AZNUSD": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "AZNEUR": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "AZNRUB": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "AZNUAH": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "AZNTRY": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "AZNGBP": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "AZNKZT": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "AZNPLN": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "TRYUSD": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "TRYEUR": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "TRYRUB": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "TRYUAH": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "TRYAZN": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "TRYGBP": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "TRYKZT": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "TRYPLN": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "GBPUSD": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "GBPEUR": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "GBPRUB": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "GBPUAH": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "GBPAZN": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "GBPTRY": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "GBPKZT": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "GBPPLN": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "KZTUSD": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "KZTEUR": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "KZTRUB": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "KZTUAH": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "KZTAZN": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "KZTTRY": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "KZTGBP": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "KZTPLN": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "PLNUSD": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "PLNEUR": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "PLNRUB": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "PLNUAH": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "PLNAZN": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "PLNTRY": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "PLNGBP": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "PLNKZT": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "USDEUR",
+                    "USDRUB",
+                    "USDUAH",
+                    "USDAZN",
+                    "USDTRY",
+                    "USDGBP",
+                    "USDKZT",
+                    "USDPLN",
+                    "EURUSD",
+                    "EURRUB",
+                    "EURUAH",
+                    "EURAZN",
+                    "EURTRY",
+                    "EURGBP",
+                    "EURKZT",
+                    "EURPLN",
+                    "RUBUSD",
+                    "RUBEUR",
+                    "RUBUAH",
+                    "RUBAZN",
+                    "RUBTRY",
+                    "RUBGBP",
+                    "RUBKZT",
+                    "RUBPLN",
+                    "UAHUSD",
+                    "UAHEUR",
+                    "UAHRUB",
+                    "UAHAZN",
+                    "UAHTRY",
+                    "UAHGBP",
+                    "UAHKZT",
+                    "UAHPLN",
+                    "AZNUSD",
+                    "AZNEUR",
+                    "AZNRUB",
+                    "AZNUAH",
+                    "AZNTRY",
+                    "AZNGBP",
+                    "AZNKZT",
+                    "AZNPLN",
+                    "TRYUSD",
+                    "TRYEUR",
+                    "TRYRUB",
+                    "TRYUAH",
+                    "TRYAZN",
+                    "TRYGBP",
+                    "TRYKZT",
+                    "TRYPLN",
+                    "GBPUSD",
+                    "GBPEUR",
+                    "GBPRUB",
+                    "GBPUAH",
+                    "GBPAZN",
+                    "GBPTRY",
+                    "GBPKZT",
+                    "GBPPLN",
+                    "KZTUSD",
+                    "KZTEUR",
+                    "KZTRUB",
+                    "KZTUAH",
+                    "KZTAZN",
+                    "KZTTRY",
+                    "KZTGBP",
+                    "KZTPLN",
+                    "PLNUSD",
+                    "PLNEUR",
+                    "PLNRUB",
+                    "PLNUAH",
+                    "PLNAZN",
+                    "PLNTRY",
+                    "PLNGBP",
+                    "PLNKZT"
+                  ]
+                },
+                "src": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "bonus": {
+                  "type": "object",
+                  "properties": {
+                    "bonus": {
+                      "type": "number"
+                    },
+                    "additionalBonus": {
+                      "type": "number"
+                    },
+                    "bonusCurrency": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "userCurrency": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "bonus",
+                    "additionalBonus",
+                    "bonusCurrency",
+                    "userCurrency"
+                  ]
+                },
+                "bid": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "existingReservations": {
+                  "type": "array",
+                  "items": {
+                    "properties": {}
+                  }
+                },
+                "similarReservations": {
+                  "type": "array",
+                  "items": {
+                    "properties": {}
+                  }
+                },
+                "intersectReservations": {
+                  "type": "array",
+                  "items": {
+                    "properties": {}
+                  }
+                },
+                "oldReservations": {
+                  "type": "array",
+                  "items": {
+                    "properties": {}
+                  }
+                },
+                "createdByAuthorizedUser": {
+                  "type": "boolean"
+                },
+                "reservations": {
+                  "type": "array",
+                  "uniqueItems": true,
+                  "minItems": 1,
+                  "items": {
+                    "required": [
+                      "resellerId",
+                      "reserved",
+                      "dtCrtd",
+                      "bid",
+                      "id",
+                      "status",
+                      "pltCrr",
+                      "confirmationId",
+                      "fareRules",
+                      "difference",
+                      "frKey",
+                      "gdsSources",
+                      "isThrough",
+                      "isCharter",
+                      "isLowcost",
+                      "sigCRS",
+                      "sigStockProvider",
+                      "ffUpgraded",
+                      "extId",
+                      "timeToReprice",
+                      "redirectLink",
+                      "adtPriceChange",
+                      "userAgent",
+                      "rsvIndexInConfirm",
+                      "callerContext"
+                    ],
+                    "properties": {
+                      "resellerId": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "prcInf": {
+                        "type": "object",
+                        "properties": {
+                          "adtB": {
+                            "type": "number"
+                          },
+                          "cnnB": {
+                            "type": "number"
+                          },
+                          "infB": {
+                            "type": "number"
+                          },
+                          "adtT": {
+                            "type": "number"
+                          },
+                          "cnnT": {
+                            "type": "number"
+                          },
+                          "infT": {
+                            "type": "number"
+                          },
+                          "cur": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "mkup": {
+                            "type": "number"
+                          },
+                          "amt": {
+                            "type": "number"
+                          },
+                          "prftPts": {
+                            "type": "array",
+                            "items": {
+                              "properties": {}
+                            }
+                          },
+                          "markupNew": {
+                            "type": "number"
+                          },
+                          "discount": {
+                            "type": "number"
+                          },
+                          "bonusDiscount": {
+                            "type": "number"
+                          },
+                          "adtBonusDiscount": {
+                            "type": "number"
+                          },
+                          "cnnBonusDiscount": {
+                            "type": "number"
+                          },
+                          "infBonusDiscount": {
+                            "type": "number"
+                          },
+                          "adtM": {
+                            "type": "number"
+                          },
+                          "adtMarkupNew": {
+                            "type": "number"
+                          },
+                          "adtDiscount": {
+                            "type": "number"
+                          },
+                          "cnnM": {
+                            "type": "number"
+                          },
+                          "cnnMarkupNew": {
+                            "type": "number"
+                          },
+                          "cnnDiscount": {
+                            "type": "number"
+                          },
+                          "infM": {
+                            "type": "number"
+                          },
+                          "infMarkupNew": {
+                            "type": "number"
+                          },
+                          "infDiscount": {
+                            "type": "number"
+                          },
+                          "adtA": {
+                            "type": "number"
+                          },
+                          "cnnA": {
+                            "type": "number"
+                          },
+                          "infA": {
+                            "type": "number"
+                          },
+                          "adtAmountWC": {
+                            "type": "number"
+                          },
+                          "cnnAmountWC": {
+                            "type": "number"
+                          },
+                          "infAmountWC": {
+                            "type": "number"
+                          },
+                          "commissionToAddAtDiscounted": {
+                            "type": "number"
+                          }
+                        },
+                        "required": [
+                          "adtB",
+                          "cnnB",
+                          "infB",
+                          "adtT",
+                          "cnnT",
+                          "infT",
+                          "cur",
+                          "mkup",
+                          "amt",
+                          "prftPts",
+                          "markupNew",
+                          "discount",
+                          "bonusDiscount",
+                          "adtBonusDiscount",
+                          "cnnBonusDiscount",
+                          "infBonusDiscount",
+                          "adtM",
+                          "adtMarkupNew",
+                          "adtDiscount",
+                          "cnnM",
+                          "cnnMarkupNew",
+                          "cnnDiscount",
+                          "infM",
+                          "infMarkupNew",
+                          "infDiscount",
+                          "adtA",
+                          "cnnA",
+                          "infA",
+                          "adtAmountWC",
+                          "cnnAmountWC",
+                          "infAmountWC",
+                          "commissionToAddAtDiscounted"
+                        ]
+                      },
+                      "trps": {
+                        "type": "array",
+                        "uniqueItems": true,
+                        "minItems": 1,
+                        "items": {
+                          "required": [
+                            "id",
+                            "airCmp",
+                            "fltNm",
+                            "cls",
+                            "stDt",
+                            "from",
+                            "to",
+                            "conx",
+                            "stTrm",
+                            "endTrm",
+                            "fltTm",
+                            "miles",
+                            "jrnTm",
+                            "plane",
+                            "oprdBy",
+                            "stTm",
+                            "endTm",
+                            "srvCls",
+                            "fic",
+                            "planeStr",
+                            "bg",
+                            "endDate",
+                            "confrm",
+                            "eTkAvail",
+                            "startDateTime",
+                            "endDateTime",
+                            "age",
+                            "stars",
+                            "key",
+                            "stAvl",
+                            "brandId",
+                            "cbg",
+                            "nvb",
+                            "nva",
+                            "status",
+                            "segNum"
+                          ],
+                          "properties": {
+                            "id": {
+                              "type": "number"
+                            },
+                            "airCmp": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "fltNm": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "cls": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "stDt": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "from": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "to": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "conx": {
+                              "type": "boolean"
+                            },
+                            "stTrm": {
+                              "type": "string"
+                            },
+                            "endTrm": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "fltTm": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "miles": {
+                              "type": "number"
+                            },
+                            "jrnTm": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "plane": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "oprdBy": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "stTm": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "endTm": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "srvCls": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "fic": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "planeStr": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "bg": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "endDate": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "confrm": {
+                              "type": "boolean"
+                            },
+                            "eTkAvail": {
+                              "type": "boolean"
+                            },
+                            "startDateTime": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "endDateTime": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "age": {
+                              "type": "number"
+                            },
+                            "stars": {
+                              "type": "number"
+                            },
+                            "flightInfo": {
+                              "type": "object",
+                              "properties": {
+                                "ages": {
+                                  "type": "object",
+                                  "properties": {
+                                    "stars": {
+                                      "type": "number"
+                                    },
+                                    "value": {
+                                      "type": "number"
+                                    }
+                                  },
+                                  "required": [
+                                    "stars",
+                                    "value"
+                                  ]
+                                },
+                                "delay": {
+                                  "type": "object",
+                                  "properties": {
+                                    "stars": {
+                                      "type": "number"
+                                    },
+                                    "value": {
+                                      "type": "number"
+                                    }
+                                  },
+                                  "required": [
+                                    "stars",
+                                    "value"
+                                  ]
+                                },
+                                "delay15": {
+                                  "type": "object",
+                                  "properties": {
+                                    "value": {
+                                      "type": "number"
+                                    },
+                                    "stars": {
+                                      "type": "number"
+                                    }
+                                  },
+                                  "required": [
+                                    "value",
+                                    "stars"
+                                  ]
+                                },
+                                "delay30": {
+                                  "type": "object",
+                                  "properties": {
+                                    "value": {
+                                      "type": "number"
+                                    },
+                                    "stars": {
+                                      "type": "number"
+                                    }
+                                  },
+                                  "required": [
+                                    "value",
+                                    "stars"
+                                  ]
+                                },
+                                "late": {
+                                  "type": "object",
+                                  "properties": {
+                                    "stars": {
+                                      "type": "number"
+                                    },
+                                    "value": {
+                                      "type": "number"
+                                    }
+                                  },
+                                  "required": [
+                                    "stars",
+                                    "value"
+                                  ]
+                                },
+                                "cancelled": {
+                                  "type": "object",
+                                  "properties": {
+                                    "stars": {
+                                      "type": "number"
+                                    },
+                                    "value": {
+                                      "type": "number"
+                                    }
+                                  },
+                                  "required": [
+                                    "stars",
+                                    "value"
+                                  ]
+                                },
+                                "seatsmaxPE": {
+                                  "type": "object",
+                                  "properties": {
+                                    "value": {
+                                      "type": "number"
+                                    },
+                                    "stars": {
+                                      "type": "number"
+                                    }
+                                  },
+                                  "required": [
+                                    "value",
+                                    "stars"
+                                  ]
+                                },
+                                "seatsmaxPB": {
+                                  "type": "object",
+                                  "properties": {
+                                    "value": {
+                                      "type": "number"
+                                    },
+                                    "stars": {
+                                      "type": "number"
+                                    }
+                                  },
+                                  "required": [
+                                    "value",
+                                    "stars"
+                                  ]
+                                },
+                                "seatsminPB": {
+                                  "type": "object",
+                                  "properties": {
+                                    "value": {
+                                      "type": "number"
+                                    },
+                                    "stars": {
+                                      "type": "number"
+                                    }
+                                  },
+                                  "required": [
+                                    "value",
+                                    "stars"
+                                  ]
+                                },
+                                "seatsminPE": {
+                                  "type": "object",
+                                  "properties": {
+                                    "value": {
+                                      "type": "number"
+                                    },
+                                    "stars": {
+                                      "type": "number"
+                                    }
+                                  },
+                                  "required": [
+                                    "value",
+                                    "stars"
+                                  ]
+                                }
+                              },
+                              "required": [
+                                "ages",
+                                "delay",
+                                "delay15",
+                                "delay30",
+                                "late",
+                                "cancelled",
+                                "seatsmaxPE",
+                                "seatsmaxPB",
+                                "seatsminPB",
+                                "seatsminPE"
+                              ]
+                            },
+                            "key": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "stAvl": {
+                              "type": "number"
+                            },
+                            "brandId": {
+                              "type": "number"
+                            },
+                            "cbg": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "nvb": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "nva": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "status": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "segNum": {
+                              "type": "number"
+                            }
+                          }
+                        }
+                      },
+                      "passengers": {
+                        "type": "array",
+                        "uniqueItems": true,
+                        "minItems": 1,
+                        "items": {
+                          "required": [
+                            "id",
+                            "firstName",
+                            "lastName",
+                            "ageType",
+                            "passNumber",
+                            "birthDate",
+                            "gender",
+                            "passCountry",
+                            "ourFirstName"
+                          ],
+                          "properties": {
+                            "id": {
+                              "type": "number"
+                            },
+                            "firstName": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "lastName": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "ageType": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "passNumber": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "birthDate": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "gender": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "passCountry": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "ourFirstName": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          }
+                        }
+                      },
+                      "reserved": {
+                        "type": "boolean"
+                      },
+                      "dtCrtd": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "messages": {
+                        "type": "array",
+                        "items": {
+                          "properties": {}
+                        }
+                      },
+                      "bid": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "availParams": {
+                        "type": "object",
+                        "properties": {
+                          "gdsInf": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "frKey": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "trps": {
+                            "type": "array",
+                            "uniqueItems": true,
+                            "minItems": 1,
+                            "items": {
+                              "required": [
+                                "stDt",
+                                "stTm",
+                                "endDate",
+                                "endTm",
+                                "from",
+                                "to",
+                                "airCmp",
+                                "fltNm",
+                                "conx",
+                                "stTrm",
+                                "endTrm",
+                                "fltTm",
+                                "jrnTm",
+                                "oprdBy",
+                                "confrm",
+                                "plane",
+                                "id",
+                                "eTkAvail",
+                                "startDateTime",
+                                "endDateTime",
+                                "miles",
+                                "age",
+                                "stars",
+                                "key",
+                                "cls",
+                                "srvCls",
+                                "fic",
+                                "stAvl",
+                                "planeStr",
+                                "brandId",
+                                "bg",
+                                "cbg"
+                              ],
+                              "properties": {
+                                "stDt": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "stTm": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "endDate": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "endTm": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "from": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "to": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "airCmp": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "fltNm": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "conx": {
+                                  "type": "boolean"
+                                },
+                                "stTrm": {
+                                  "type": "string"
+                                },
+                                "endTrm": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "fltTm": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "jrnTm": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "oprdBy": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "confrm": {
+                                  "type": "boolean"
+                                },
+                                "plane": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "id": {
+                                  "type": "number"
+                                },
+                                "eTkAvail": {
+                                  "type": "boolean"
+                                },
+                                "startDateTime": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "endDateTime": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "miles": {
+                                  "type": "number"
+                                },
+                                "age": {
+                                  "type": "number"
+                                },
+                                "stars": {
+                                  "type": "number"
+                                },
+                                "flightInfo": {
+                                  "type": "object",
+                                  "properties": {
+                                    "ages": {
+                                      "type": "object",
+                                      "properties": {
+                                        "stars": {
+                                          "type": "number"
+                                        },
+                                        "value": {
+                                          "type": "number"
+                                        }
+                                      },
+                                      "required": [
+                                        "stars",
+                                        "value"
+                                      ]
+                                    },
+                                    "delay": {
+                                      "type": "object",
+                                      "properties": {
+                                        "stars": {
+                                          "type": "number"
+                                        },
+                                        "value": {
+                                          "type": "number"
+                                        }
+                                      },
+                                      "required": [
+                                        "stars",
+                                        "value"
+                                      ]
+                                    },
+                                    "delay15": {
+                                      "type": "object",
+                                      "properties": {
+                                        "value": {
+                                          "type": "number"
+                                        },
+                                        "stars": {
+                                          "type": "number"
+                                        }
+                                      },
+                                      "required": [
+                                        "value",
+                                        "stars"
+                                      ]
+                                    },
+                                    "delay30": {
+                                      "type": "object",
+                                      "properties": {
+                                        "value": {
+                                          "type": "number"
+                                        },
+                                        "stars": {
+                                          "type": "number"
+                                        }
+                                      },
+                                      "required": [
+                                        "value",
+                                        "stars"
+                                      ]
+                                    },
+                                    "late": {
+                                      "type": "object",
+                                      "properties": {
+                                        "stars": {
+                                          "type": "number"
+                                        },
+                                        "value": {
+                                          "type": "number"
+                                        }
+                                      },
+                                      "required": [
+                                        "stars",
+                                        "value"
+                                      ]
+                                    },
+                                    "cancelled": {
+                                      "type": "object",
+                                      "properties": {
+                                        "stars": {
+                                          "type": "number"
+                                        },
+                                        "value": {
+                                          "type": "number"
+                                        }
+                                      },
+                                      "required": [
+                                        "stars",
+                                        "value"
+                                      ]
+                                    },
+                                    "seatsmaxPE": {
+                                      "type": "object",
+                                      "properties": {
+                                        "value": {
+                                          "type": "number"
+                                        },
+                                        "stars": {
+                                          "type": "number"
+                                        }
+                                      },
+                                      "required": [
+                                        "value",
+                                        "stars"
+                                      ]
+                                    },
+                                    "seatsmaxPB": {
+                                      "type": "object",
+                                      "properties": {
+                                        "value": {
+                                          "type": "number"
+                                        },
+                                        "stars": {
+                                          "type": "number"
+                                        }
+                                      },
+                                      "required": [
+                                        "value",
+                                        "stars"
+                                      ]
+                                    },
+                                    "seatsminPB": {
+                                      "type": "object",
+                                      "properties": {
+                                        "value": {
+                                          "type": "number"
+                                        },
+                                        "stars": {
+                                          "type": "number"
+                                        }
+                                      },
+                                      "required": [
+                                        "value",
+                                        "stars"
+                                      ]
+                                    },
+                                    "seatsminPE": {
+                                      "type": "object",
+                                      "properties": {
+                                        "value": {
+                                          "type": "number"
+                                        },
+                                        "stars": {
+                                          "type": "number"
+                                        }
+                                      },
+                                      "required": [
+                                        "value",
+                                        "stars"
+                                      ]
+                                    }
+                                  },
+                                  "required": [
+                                    "ages",
+                                    "delay",
+                                    "delay15",
+                                    "delay30",
+                                    "late",
+                                    "cancelled",
+                                    "seatsmaxPE",
+                                    "seatsmaxPB",
+                                    "seatsminPB",
+                                    "seatsminPE"
+                                  ]
+                                },
+                                "key": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "cls": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "srvCls": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "fic": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "stAvl": {
+                                  "type": "number"
+                                },
+                                "planeStr": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "brandId": {
+                                  "type": "number"
+                                },
+                                "bg": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "cbg": {
+                                  "type": "string",
+                                  "minLength": 1
+                                }
+                              }
+                            }
+                          },
+                          "srid": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "passengers": {
+                            "type": "array",
+                            "uniqueItems": true,
+                            "minItems": 1,
+                            "items": {
+                              "required": [
+                                "id",
+                                "firstName",
+                                "lastName",
+                                "ageType",
+                                "passNumber",
+                                "birthDate",
+                                "gender",
+                                "passCountry"
+                              ],
+                              "properties": {
+                                "id": {
+                                  "type": "number"
+                                },
+                                "firstName": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "lastName": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "ageType": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "passNumber": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "birthDate": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "gender": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "passCountry": {
+                                  "type": "string",
+                                  "minLength": 1
+                                }
+                              }
+                            }
+                          },
+                          "customerLanguage": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "cur": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "email": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "testGds": {
+                            "type": "boolean"
+                          },
+                          "src": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "srcmarker2": {
+                            "type": "string"
+                          },
+                          "srcmarker": {
+                            "type": "object",
+                            "properties": {
+                              "marker2": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "marker2"
+                            ]
+                          },
+                          "pltCrr": {
+                            "type": "string",
+                            "minLength": 1
+                          }
+                        },
+                        "required": [
+                          "gdsInf",
+                          "frKey",
+                          "trps",
+                          "srid",
+                          "passengers",
+                          "customerLanguage",
+                          "cur",
+                          "email",
+                          "testGds",
+                          "src",
+                          "srcmarker2",
+                          "srcmarker",
+                          "pltCrr"
+                        ]
+                      },
+                      "id": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "status": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "pltCrr": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "fareInfo": {
+                        "type": "object",
+                        "properties": {
+                          "base": {
+                            "type": "number"
+                          },
+                          "total": {
+                            "type": "number"
+                          },
+                          "baseCurrency": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "totalCurrency": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "taxes": {
+                            "type": "array",
+                            "uniqueItems": true,
+                            "minItems": 1,
+                            "items": {
+                              "required": [
+                                "country",
+                                "amt",
+                                "cur"
+                              ],
+                              "properties": {
+                                "country": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "amt": {
+                                  "type": "number"
+                                },
+                                "cur": {
+                                  "type": "string",
+                                  "minLength": 1
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "required": [
+                          "base",
+                          "total",
+                          "baseCurrency",
+                          "totalCurrency",
+                          "taxes"
+                        ]
+                      },
+                      "fareInfos": {
+                        "type": "object",
+                        "properties": {
+                          "ADT": {
+                            "type": "object",
+                            "properties": {
+                              "taxes": {
+                                "type": "array",
+                                "uniqueItems": true,
+                                "minItems": 1,
+                                "items": {
+                                  "required": [
+                                    "country",
+                                    "amt",
+                                    "cur"
+                                  ],
+                                  "properties": {
+                                    "country": {
+                                      "type": "string",
+                                      "minLength": 1
+                                    },
+                                    "amt": {
+                                      "type": "number"
+                                    },
+                                    "cur": {
+                                      "type": "string",
+                                      "minLength": 1
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "required": [
+                              "taxes"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "ADT"
+                        ]
+                      },
+                      "confirmationId": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "fareRules": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "difference": {
+                        "type": "number"
+                      },
+                      "frKey": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "gdsSources": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "isThrough": {
+                        "type": "boolean"
+                      },
+                      "isCharter": {
+                        "type": "boolean"
+                      },
+                      "isLowcost": {
+                        "type": "boolean"
+                      },
+                      "sigCRS": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "sigStockProvider": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "ffUpgraded": {
+                        "type": "boolean"
+                      },
+                      "extId": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "timeToReprice": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "redirectLink": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "currencies": {
+                        "type": "object",
+                        "properties": {
+                          "USDEUR": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "USDRUB": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "USDUAH": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "USDAZN": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "USDTRY": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "USDGBP": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "USDKZT": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "USDPLN": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "EURUSD": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "EURRUB": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "EURUAH": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "EURAZN": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "EURTRY": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "EURGBP": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "EURKZT": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "EURPLN": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "RUBUSD": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "RUBEUR": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "RUBUAH": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "RUBAZN": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "RUBTRY": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "RUBGBP": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "RUBKZT": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "RUBPLN": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "UAHUSD": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "UAHEUR": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "UAHRUB": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "UAHAZN": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "UAHTRY": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "UAHGBP": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "UAHKZT": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "UAHPLN": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "AZNUSD": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "AZNEUR": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "AZNRUB": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "AZNUAH": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "AZNTRY": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "AZNGBP": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "AZNKZT": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "AZNPLN": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "TRYUSD": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "TRYEUR": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "TRYRUB": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "TRYUAH": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "TRYAZN": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "TRYGBP": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "TRYKZT": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "TRYPLN": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "GBPUSD": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "GBPEUR": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "GBPRUB": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "GBPUAH": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "GBPAZN": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "GBPTRY": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "GBPKZT": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "GBPPLN": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "KZTUSD": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "KZTEUR": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "KZTRUB": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "KZTUAH": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "KZTAZN": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "KZTTRY": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "KZTGBP": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "KZTPLN": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "PLNUSD": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "PLNEUR": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "PLNRUB": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "PLNUAH": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "PLNAZN": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "PLNTRY": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "PLNGBP": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "PLNKZT": {
+                            "type": "string",
+                            "minLength": 1
+                          }
+                        },
+                        "required": [
+                          "USDEUR",
+                          "USDRUB",
+                          "USDUAH",
+                          "USDAZN",
+                          "USDTRY",
+                          "USDGBP",
+                          "USDKZT",
+                          "USDPLN",
+                          "EURUSD",
+                          "EURRUB",
+                          "EURUAH",
+                          "EURAZN",
+                          "EURTRY",
+                          "EURGBP",
+                          "EURKZT",
+                          "EURPLN",
+                          "RUBUSD",
+                          "RUBEUR",
+                          "RUBUAH",
+                          "RUBAZN",
+                          "RUBTRY",
+                          "RUBGBP",
+                          "RUBKZT",
+                          "RUBPLN",
+                          "UAHUSD",
+                          "UAHEUR",
+                          "UAHRUB",
+                          "UAHAZN",
+                          "UAHTRY",
+                          "UAHGBP",
+                          "UAHKZT",
+                          "UAHPLN",
+                          "AZNUSD",
+                          "AZNEUR",
+                          "AZNRUB",
+                          "AZNUAH",
+                          "AZNTRY",
+                          "AZNGBP",
+                          "AZNKZT",
+                          "AZNPLN",
+                          "TRYUSD",
+                          "TRYEUR",
+                          "TRYRUB",
+                          "TRYUAH",
+                          "TRYAZN",
+                          "TRYGBP",
+                          "TRYKZT",
+                          "TRYPLN",
+                          "GBPUSD",
+                          "GBPEUR",
+                          "GBPRUB",
+                          "GBPUAH",
+                          "GBPAZN",
+                          "GBPTRY",
+                          "GBPKZT",
+                          "GBPPLN",
+                          "KZTUSD",
+                          "KZTEUR",
+                          "KZTRUB",
+                          "KZTUAH",
+                          "KZTAZN",
+                          "KZTTRY",
+                          "KZTGBP",
+                          "KZTPLN",
+                          "PLNUSD",
+                          "PLNEUR",
+                          "PLNRUB",
+                          "PLNUAH",
+                          "PLNAZN",
+                          "PLNTRY",
+                          "PLNGBP",
+                          "PLNKZT"
+                        ]
+                      },
+                      "rates": {
+                        "type": "object",
+                        "properties": {
+                          "USDEUR": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "USDRUB": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "USDUAH": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "USDAZN": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "USDTRY": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "USDGBP": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "USDKZT": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "USDPLN": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "EURUSD": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "EURRUB": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "EURUAH": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "EURAZN": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "EURTRY": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "EURGBP": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "EURKZT": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "EURPLN": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "RUBUSD": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "RUBEUR": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "RUBUAH": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "RUBAZN": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "RUBTRY": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "RUBGBP": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "RUBKZT": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "RUBPLN": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "UAHUSD": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "UAHEUR": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "UAHRUB": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "UAHAZN": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "UAHTRY": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "UAHGBP": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "UAHKZT": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "UAHPLN": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "AZNUSD": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "AZNEUR": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "AZNRUB": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "AZNUAH": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "AZNTRY": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "AZNGBP": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "AZNKZT": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "AZNPLN": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "TRYUSD": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "TRYEUR": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "TRYRUB": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "TRYUAH": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "TRYAZN": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "TRYGBP": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "TRYKZT": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "TRYPLN": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "GBPUSD": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "GBPEUR": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "GBPRUB": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "GBPUAH": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "GBPAZN": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "GBPTRY": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "GBPKZT": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "GBPPLN": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "KZTUSD": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "KZTEUR": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "KZTRUB": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "KZTUAH": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "KZTAZN": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "KZTTRY": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "KZTGBP": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "KZTPLN": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "PLNUSD": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "PLNEUR": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "PLNRUB": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "PLNUAH": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "PLNAZN": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "PLNTRY": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "PLNGBP": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "PLNKZT": {
+                            "type": "string",
+                            "minLength": 1
+                          }
+                        },
+                        "required": [
+                          "USDEUR",
+                          "USDRUB",
+                          "USDUAH",
+                          "USDAZN",
+                          "USDTRY",
+                          "USDGBP",
+                          "USDKZT",
+                          "USDPLN",
+                          "EURUSD",
+                          "EURRUB",
+                          "EURUAH",
+                          "EURAZN",
+                          "EURTRY",
+                          "EURGBP",
+                          "EURKZT",
+                          "EURPLN",
+                          "RUBUSD",
+                          "RUBEUR",
+                          "RUBUAH",
+                          "RUBAZN",
+                          "RUBTRY",
+                          "RUBGBP",
+                          "RUBKZT",
+                          "RUBPLN",
+                          "UAHUSD",
+                          "UAHEUR",
+                          "UAHRUB",
+                          "UAHAZN",
+                          "UAHTRY",
+                          "UAHGBP",
+                          "UAHKZT",
+                          "UAHPLN",
+                          "AZNUSD",
+                          "AZNEUR",
+                          "AZNRUB",
+                          "AZNUAH",
+                          "AZNTRY",
+                          "AZNGBP",
+                          "AZNKZT",
+                          "AZNPLN",
+                          "TRYUSD",
+                          "TRYEUR",
+                          "TRYRUB",
+                          "TRYUAH",
+                          "TRYAZN",
+                          "TRYGBP",
+                          "TRYKZT",
+                          "TRYPLN",
+                          "GBPUSD",
+                          "GBPEUR",
+                          "GBPRUB",
+                          "GBPUAH",
+                          "GBPAZN",
+                          "GBPTRY",
+                          "GBPKZT",
+                          "GBPPLN",
+                          "KZTUSD",
+                          "KZTEUR",
+                          "KZTRUB",
+                          "KZTUAH",
+                          "KZTAZN",
+                          "KZTTRY",
+                          "KZTGBP",
+                          "KZTPLN",
+                          "PLNUSD",
+                          "PLNEUR",
+                          "PLNRUB",
+                          "PLNUAH",
+                          "PLNAZN",
+                          "PLNTRY",
+                          "PLNGBP",
+                          "PLNKZT"
+                        ]
+                      },
+                      "pmtVrnts": {
+                        "type": "array",
+                        "uniqueItems": true,
+                        "minItems": 1,
+                        "items": {
+                          "required": [
+                            "tag",
+                            "cur"
+                          ],
+                          "properties": {
+                            "tag": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "transactions": {
+                              "type": "array",
+                              "uniqueItems": true,
+                              "minItems": 1,
+                              "items": {
+                                "required": [
+                                  "paySystem",
+                                  "cur",
+                                  "adtA",
+                                  "cnnA",
+                                  "infA",
+                                  "adtC",
+                                  "cnnC",
+                                  "infC",
+                                  "total"
+                                ],
+                                "properties": {
+                                  "paySystem": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "cur": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "adtA": {
+                                    "type": "number"
+                                  },
+                                  "cnnA": {
+                                    "type": "number"
+                                  },
+                                  "infA": {
+                                    "type": "number"
+                                  },
+                                  "adtC": {
+                                    "type": "number"
+                                  },
+                                  "cnnC": {
+                                    "type": "number"
+                                  },
+                                  "infC": {
+                                    "type": "number"
+                                  },
+                                  "total": {
+                                    "type": "number"
+                                  }
+                                }
+                              }
+                            },
+                            "passengersCount": {
+                              "type": "object",
+                              "properties": {
+                                "adtCount": {
+                                  "type": "number"
+                                },
+                                "cnnCount": {
+                                  "type": "number"
+                                },
+                                "infCount": {
+                                  "type": "number"
+                                }
+                              },
+                              "required": [
+                                "adtCount",
+                                "cnnCount",
+                                "infCount"
+                              ]
+                            },
+                            "cur": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          }
+                        }
+                      },
+                      "pmtVrnts_new": {
+                        "type": "object",
+                        "properties": {
+                          "payture_vtb": {
+                            "type": "object",
+                            "properties": {
+                              "tag": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "transactions": {
+                                "type": "array",
+                                "uniqueItems": true,
+                                "minItems": 1,
+                                "items": {
+                                  "required": [
+                                    "paySystem",
+                                    "cur",
+                                    "adtA",
+                                    "cnnA",
+                                    "infA",
+                                    "adtC",
+                                    "cnnC",
+                                    "infC",
+                                    "total"
+                                  ],
+                                  "properties": {
+                                    "paySystem": {
+                                      "type": "string",
+                                      "minLength": 1
+                                    },
+                                    "cur": {
+                                      "type": "string",
+                                      "minLength": 1
+                                    },
+                                    "adtA": {
+                                      "type": "number"
+                                    },
+                                    "cnnA": {
+                                      "type": "number"
+                                    },
+                                    "infA": {
+                                      "type": "number"
+                                    },
+                                    "adtC": {
+                                      "type": "number"
+                                    },
+                                    "cnnC": {
+                                      "type": "number"
+                                    },
+                                    "infC": {
+                                      "type": "number"
+                                    },
+                                    "total": {
+                                      "type": "number"
+                                    }
+                                  }
+                                }
+                              },
+                              "passengersCount": {
+                                "type": "object",
+                                "properties": {
+                                  "adtCount": {
+                                    "type": "number"
+                                  },
+                                  "cnnCount": {
+                                    "type": "number"
+                                  },
+                                  "infCount": {
+                                    "type": "number"
+                                  }
+                                },
+                                "required": [
+                                  "adtCount",
+                                  "cnnCount",
+                                  "infCount"
+                                ]
+                              }
+                            },
+                            "required": [
+                              "tag",
+                              "transactions",
+                              "passengersCount"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "payture_vtb"
+                        ]
+                      },
+                      "adtPriceChange": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "forConditions": {
+                        "type": "object",
+                        "properties": {
+                          "cookies": {
+                            "type": "object",
+                            "properties": {
+                              "bidh": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "vid": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "accept_language": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "_ga": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "_sst": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "sid": {
+                                "type": "string",
+                                "minLength": 1
+                              }
+                            },
+                            "required": [
+                              "bidh",
+                              "vid",
+                              "accept_language",
+                              "_ga",
+                              "_sst",
+                              "sid"
+                            ]
+                          },
+                          "packetMarkup": {},
+                          "groupsByBid": {
+                            "type": "array",
+                            "items": {
+                              "properties": {}
+                            }
+                          }
+                        },
+                        "required": [
+                          "cookies",
+                          "groupsByBid"
+                        ]
+                      },
+                      "userAgent": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "srcmarker": {
+                        "type": "object",
+                        "properties": {
+                          "marker2": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "marker2"
+                        ]
+                      },
+                      "orderPassengers": {
+                        "type": "array",
+                        "uniqueItems": true,
+                        "minItems": 1,
+                        "items": {
+                          "required": [
+                            "id",
+                            "firstName",
+                            "lastName",
+                            "ageType",
+                            "passNumber",
+                            "birthDate",
+                            "gender",
+                            "passCountry",
+                            "ourFirstName"
+                          ],
+                          "properties": {
+                            "id": {
+                              "type": "number"
+                            },
+                            "firstName": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "lastName": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "ageType": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "passNumber": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "birthDate": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "gender": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "passCountry": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "ourFirstName": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          }
+                        }
+                      },
+                      "rsvIndexInConfirm": {
+                        "type": "number"
+                      },
+                      "callerContext": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "prcInfNew": {
+                        "type": "object",
+                        "properties": {
+                          "adtB": {
+                            "type": "number"
+                          },
+                          "cnnB": {
+                            "type": "number"
+                          },
+                          "infB": {
+                            "type": "number"
+                          },
+                          "adtT": {
+                            "type": "number"
+                          },
+                          "cnnT": {
+                            "type": "number"
+                          },
+                          "infT": {
+                            "type": "number"
+                          },
+                          "cur": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "mkup": {
+                            "type": "number"
+                          },
+                          "amt": {
+                            "type": "number"
+                          },
+                          "prftPts": {
+                            "type": "array",
+                            "items": {
+                              "properties": {}
+                            }
+                          },
+                          "markupNew": {
+                            "type": "number"
+                          },
+                          "discount": {
+                            "type": "number"
+                          },
+                          "bonusDiscount": {
+                            "type": "number"
+                          },
+                          "adtBonusDiscount": {
+                            "type": "number"
+                          },
+                          "cnnBonusDiscount": {
+                            "type": "number"
+                          },
+                          "infBonusDiscount": {
+                            "type": "number"
+                          },
+                          "adtM": {
+                            "type": "number"
+                          },
+                          "adtMarkupNew": {
+                            "type": "number"
+                          },
+                          "adtDiscount": {
+                            "type": "number"
+                          },
+                          "cnnM": {
+                            "type": "number"
+                          },
+                          "cnnMarkupNew": {
+                            "type": "number"
+                          },
+                          "cnnDiscount": {
+                            "type": "number"
+                          },
+                          "infM": {
+                            "type": "number"
+                          },
+                          "infMarkupNew": {
+                            "type": "number"
+                          },
+                          "infDiscount": {
+                            "type": "number"
+                          },
+                          "adtA": {
+                            "type": "number"
+                          },
+                          "cnnA": {
+                            "type": "number"
+                          },
+                          "infA": {
+                            "type": "number"
+                          },
+                          "adtAmountWC": {
+                            "type": "number"
+                          },
+                          "cnnAmountWC": {
+                            "type": "number"
+                          },
+                          "infAmountWC": {
+                            "type": "number"
+                          },
+                          "commissionToAddAtDiscounted": {
+                            "type": "number"
+                          }
+                        },
+                        "required": [
+                          "adtB",
+                          "cnnB",
+                          "infB",
+                          "adtT",
+                          "cnnT",
+                          "infT",
+                          "cur",
+                          "mkup",
+                          "amt",
+                          "prftPts",
+                          "markupNew",
+                          "discount",
+                          "bonusDiscount",
+                          "adtBonusDiscount",
+                          "cnnBonusDiscount",
+                          "infBonusDiscount",
+                          "adtM",
+                          "adtMarkupNew",
+                          "adtDiscount",
+                          "cnnM",
+                          "cnnMarkupNew",
+                          "cnnDiscount",
+                          "infM",
+                          "infMarkupNew",
+                          "infDiscount",
+                          "adtA",
+                          "cnnA",
+                          "infA",
+                          "adtAmountWC",
+                          "cnnAmountWC",
+                          "infAmountWC",
+                          "commissionToAddAtDiscounted"
+                        ]
+                      }
+                    }
+                  }
+                },
+                "agentCountry": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "pltCrr": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "lstTkDt": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "createAt": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "voidTimeUTC": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "srid": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "email": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "resellerId": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "customerLanguage": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "ipFrom": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "twoOW4RT": {
+                  "type": "boolean"
+                },
+                "visitorId": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "is2GDS4RT": {
+                  "type": "boolean"
+                },
+                "isMobile": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "fare_agent": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "hostEnv": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "orderPaymentValues": {
+                  "type": "object",
+                  "properties": {
+                    "pnrAmounts": {
+                      "type": "object",
+                      "properties": {
+                        "test695": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "cardAmount": {
+                              "type": "number"
+                            },
+                            "adtCardAmount": {
+                              "type": "number"
+                            },
+                            "cnnCardAmount": {
+                              "type": "number"
+                            },
+                            "infCardAmount": {
+                              "type": "number"
+                            },
+                            "adtCashAmount": {
+                              "type": "number"
+                            },
+                            "cnnCashAmount": {
+                              "type": "number"
+                            },
+                            "infCashAmount": {
+                              "type": "number"
+                            },
+                            "gdsCardCommission": {
+                              "type": "number"
+                            },
+                            "cashAmount": {
+                              "type": "number"
+                            },
+                            "pgAmount": {
+                              "type": "number"
+                            },
+                            "pgCommission": {
+                              "type": "number"
+                            },
+                            "prcInf": {
+                              "type": "object",
+                              "properties": {
+                                "adtB": {
+                                  "type": "number"
+                                },
+                                "cnnB": {
+                                  "type": "number"
+                                },
+                                "infB": {
+                                  "type": "number"
+                                },
+                                "adtT": {
+                                  "type": "number"
+                                },
+                                "cnnT": {
+                                  "type": "number"
+                                },
+                                "infT": {
+                                  "type": "number"
+                                },
+                                "cur": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "mkup": {
+                                  "type": "number"
+                                },
+                                "amt": {
+                                  "type": "number"
+                                },
+                                "prftPts": {
+                                  "type": "array",
+                                  "uniqueItems": true,
+                                  "minItems": 1,
+                                  "items": {
+                                    "required": [
+                                      "clientId",
+                                      "srcAmt",
+                                      "srcAmtType",
+                                      "absAmt",
+                                      "tp",
+                                      "src",
+                                      "tag",
+                                      "adtAbsAmt",
+                                      "cnnAbsAmt",
+                                      "infAbsAmt",
+                                      "path"
+                                    ],
+                                    "properties": {
+                                      "clientId": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "srcAmt": {
+                                        "type": "number"
+                                      },
+                                      "srcAmtType": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "absAmt": {
+                                        "type": "number"
+                                      },
+                                      "tp": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "src": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "tag": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "adtAbsAmt": {
+                                        "type": "number"
+                                      },
+                                      "cnnAbsAmt": {
+                                        "type": "number"
+                                      },
+                                      "infAbsAmt": {
+                                        "type": "number"
+                                      },
+                                      "path": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      }
+                                    }
+                                  }
+                                },
+                                "markupNew": {
+                                  "type": "number"
+                                },
+                                "discount": {
+                                  "type": "number"
+                                },
+                                "bonusDiscount": {
+                                  "type": "number"
+                                },
+                                "adtBonusDiscount": {
+                                  "type": "number"
+                                },
+                                "cnnBonusDiscount": {
+                                  "type": "number"
+                                },
+                                "infBonusDiscount": {
+                                  "type": "number"
+                                },
+                                "adtM": {
+                                  "type": "number"
+                                },
+                                "adtMarkupNew": {
+                                  "type": "number"
+                                },
+                                "adtDiscount": {
+                                  "type": "number"
+                                },
+                                "cnnM": {
+                                  "type": "number"
+                                },
+                                "cnnMarkupNew": {
+                                  "type": "number"
+                                },
+                                "cnnDiscount": {
+                                  "type": "number"
+                                },
+                                "infM": {
+                                  "type": "number"
+                                },
+                                "infMarkupNew": {
+                                  "type": "number"
+                                },
+                                "infDiscount": {
+                                  "type": "number"
+                                },
+                                "adtA": {
+                                  "type": "number"
+                                },
+                                "cnnA": {
+                                  "type": "number"
+                                },
+                                "infA": {
+                                  "type": "number"
+                                },
+                                "adtAmountWC": {
+                                  "type": "number"
+                                },
+                                "cnnAmountWC": {
+                                  "type": "number"
+                                },
+                                "infAmountWC": {
+                                  "type": "number"
+                                },
+                                "commissionToAddAtDiscounted": {
+                                  "type": "number"
+                                }
+                              },
+                              "required": [
+                                "adtB",
+                                "cnnB",
+                                "infB",
+                                "adtT",
+                                "cnnT",
+                                "infT",
+                                "cur",
+                                "mkup",
+                                "amt",
+                                "prftPts",
+                                "markupNew",
+                                "discount",
+                                "bonusDiscount",
+                                "adtBonusDiscount",
+                                "cnnBonusDiscount",
+                                "infBonusDiscount",
+                                "adtM",
+                                "adtMarkupNew",
+                                "adtDiscount",
+                                "cnnM",
+                                "cnnMarkupNew",
+                                "cnnDiscount",
+                                "infM",
+                                "infMarkupNew",
+                                "infDiscount",
+                                "adtA",
+                                "cnnA",
+                                "infA",
+                                "adtAmountWC",
+                                "cnnAmountWC",
+                                "infAmountWC",
+                                "commissionToAddAtDiscounted"
+                              ]
+                            },
+                            "paySystemTag": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "adtCount": {
+                              "type": "number"
+                            },
+                            "cnnCount": {
+                              "type": "number"
+                            },
+                            "infCount": {
+                              "type": "number"
+                            },
+                            "adtC": {
+                              "type": "number"
+                            },
+                            "cnnC": {
+                              "type": "number"
+                            },
+                            "infC": {
+                              "type": "number"
+                            },
+                            "refundAccountAmount": {
+                              "type": "number"
+                            },
+                            "refundAccountCommission": {
+                              "type": "number"
+                            },
+                            "passengers": {
+                              "type": "array",
+                              "uniqueItems": true,
+                              "minItems": 1,
+                              "items": {
+                                "required": [
+                                  "id",
+                                  "firstName",
+                                  "lastName",
+                                  "ageType",
+                                  "passNumber",
+                                  "birthDate",
+                                  "gender",
+                                  "passCountry",
+                                  "origFirstName",
+                                  "origLastName",
+                                  "orderInConfirm",
+                                  "ourFirstName",
+                                  "age",
+                                  "passexpDate"
+                                ],
+                                "properties": {
+                                  "id": {
+                                    "type": "number"
+                                  },
+                                  "firstName": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "lastName": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "ageType": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "passNumber": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "birthDate": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "gender": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "passCountry": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "origFirstName": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "origLastName": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "orderInConfirm": {
+                                    "type": "number"
+                                  },
+                                  "ourFirstName": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "age": {
+                                    "type": "number"
+                                  },
+                                  "passexpDate": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "required": [
+                            "id",
+                            "cardAmount",
+                            "adtCardAmount",
+                            "cnnCardAmount",
+                            "infCardAmount",
+                            "adtCashAmount",
+                            "cnnCashAmount",
+                            "infCashAmount",
+                            "gdsCardCommission",
+                            "cashAmount",
+                            "pgAmount",
+                            "pgCommission",
+                            "prcInf",
+                            "paySystemTag",
+                            "adtCount",
+                            "cnnCount",
+                            "infCount",
+                            "adtC",
+                            "cnnC",
+                            "infC",
+                            "refundAccountAmount",
+                            "refundAccountCommission",
+                            "passengers"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "test695"
+                      ]
+                    },
+                    "totalCommission": {
+                      "type": "number"
+                    },
+                    "totalAmount": {
+                      "type": "number"
+                    },
+                    "totalOrderAmount": {
+                      "type": "number"
+                    },
+                    "cur": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "useBonus": {
+                      "type": "boolean"
+                    },
+                    "useAgentCard": {
+                      "type": "boolean"
+                    },
+                    "rates": {
+                      "type": "object",
+                      "properties": {
+                        "USDEUR": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "USDRUB": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "USDUAH": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "USDAZN": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "USDTRY": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "USDGBP": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "USDKZT": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "USDPLN": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "EURUSD": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "EURRUB": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "EURUAH": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "EURAZN": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "EURTRY": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "EURGBP": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "EURKZT": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "EURPLN": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "RUBUSD": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "RUBEUR": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "RUBUAH": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "RUBAZN": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "RUBTRY": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "RUBGBP": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "RUBKZT": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "RUBPLN": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "UAHUSD": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "UAHEUR": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "UAHRUB": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "UAHAZN": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "UAHTRY": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "UAHGBP": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "UAHKZT": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "UAHPLN": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "AZNUSD": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "AZNEUR": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "AZNRUB": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "AZNUAH": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "AZNTRY": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "AZNGBP": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "AZNKZT": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "AZNPLN": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "TRYUSD": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "TRYEUR": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "TRYRUB": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "TRYUAH": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "TRYAZN": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "TRYGBP": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "TRYKZT": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "TRYPLN": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "GBPUSD": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "GBPEUR": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "GBPRUB": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "GBPUAH": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "GBPAZN": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "GBPTRY": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "GBPKZT": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "GBPPLN": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "KZTUSD": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "KZTEUR": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "KZTRUB": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "KZTUAH": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "KZTAZN": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "KZTTRY": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "KZTGBP": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "KZTPLN": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "PLNUSD": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "PLNEUR": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "PLNRUB": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "PLNUAH": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "PLNAZN": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "PLNTRY": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "PLNGBP": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "PLNKZT": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      },
+                      "required": [
+                        "USDEUR",
+                        "USDRUB",
+                        "USDUAH",
+                        "USDAZN",
+                        "USDTRY",
+                        "USDGBP",
+                        "USDKZT",
+                        "USDPLN",
+                        "EURUSD",
+                        "EURRUB",
+                        "EURUAH",
+                        "EURAZN",
+                        "EURTRY",
+                        "EURGBP",
+                        "EURKZT",
+                        "EURPLN",
+                        "RUBUSD",
+                        "RUBEUR",
+                        "RUBUAH",
+                        "RUBAZN",
+                        "RUBTRY",
+                        "RUBGBP",
+                        "RUBKZT",
+                        "RUBPLN",
+                        "UAHUSD",
+                        "UAHEUR",
+                        "UAHRUB",
+                        "UAHAZN",
+                        "UAHTRY",
+                        "UAHGBP",
+                        "UAHKZT",
+                        "UAHPLN",
+                        "AZNUSD",
+                        "AZNEUR",
+                        "AZNRUB",
+                        "AZNUAH",
+                        "AZNTRY",
+                        "AZNGBP",
+                        "AZNKZT",
+                        "AZNPLN",
+                        "TRYUSD",
+                        "TRYEUR",
+                        "TRYRUB",
+                        "TRYUAH",
+                        "TRYAZN",
+                        "TRYGBP",
+                        "TRYKZT",
+                        "TRYPLN",
+                        "GBPUSD",
+                        "GBPEUR",
+                        "GBPRUB",
+                        "GBPUAH",
+                        "GBPAZN",
+                        "GBPTRY",
+                        "GBPKZT",
+                        "GBPPLN",
+                        "KZTUSD",
+                        "KZTEUR",
+                        "KZTRUB",
+                        "KZTUAH",
+                        "KZTAZN",
+                        "KZTTRY",
+                        "KZTGBP",
+                        "KZTPLN",
+                        "PLNUSD",
+                        "PLNEUR",
+                        "PLNRUB",
+                        "PLNUAH",
+                        "PLNAZN",
+                        "PLNTRY",
+                        "PLNGBP",
+                        "PLNKZT"
+                      ]
+                    },
+                    "refundAccountAmount": {
+                      "type": "number"
+                    },
+                    "refundAccountCommission": {
+                      "type": "number"
+                    },
+                    "giftCertificateResidual": {
+                      "type": "number"
+                    },
+                    "paySystemTag": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "vasAmounts": {
+                      "type": "object",
+                      "properties": {
+                        "total": {
+                          "type": "number"
+                        },
+                        "cur": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "services": {
+                          "type": "array",
+                          "items": {
+                            "properties": {}
+                          }
+                        }
+                      },
+                      "required": [
+                        "total",
+                        "cur",
+                        "services"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "pnrAmounts",
+                    "totalCommission",
+                    "totalAmount",
+                    "totalOrderAmount",
+                    "cur",
+                    "useBonus",
+                    "useAgentCard",
+                    "rates",
+                    "refundAccountAmount",
+                    "refundAccountCommission",
+                    "giftCertificateResidual",
+                    "paySystemTag",
+                    "vasAmounts"
+                  ]
+                },
+                "pmtVrnts": {
+                  "type": "array",
+                  "uniqueItems": true,
+                  "minItems": 1,
+                  "items": {
+                    "required": [
+                      "tag",
+                      "paySystemTag",
+                      "tp"
+                    ],
+                    "properties": {
+                      "tag": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "paySystemTag": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "tp": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    }
+                  }
+                },
+                "date": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "additionalServices": {
+                  "type": "object",
+                  "properties": {
+                    "notification": {
+                      "type": "object",
+                      "properties": {
+                        "types": {
+                          "type": "array",
+                          "uniqueItems": true,
+                          "minItems": 1,
+                          "items": {
+                            "required": [
+                              "tp",
+                              "amt",
+                              "perSegment",
+                              "src",
+                              "cur"
+                            ],
+                            "properties": {
+                              "tp": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "amt": {
+                                "type": "number"
+                              },
+                              "perSegment": {
+                                "type": "number"
+                              },
+                              "src": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "cur": {
+                                "type": "string",
+                                "minLength": 1
+                              }
+                            }
+                          }
+                        },
+                        "pmtVrnts": {
+                          "type": "array",
+                          "uniqueItems": true,
+                          "minItems": 1,
+                          "items": {
+                            "required": [
+                              "tp",
+                              "tag"
+                            ],
+                            "properties": {
+                              "tp": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "tag": {
+                                "type": "string",
+                                "minLength": 1
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "required": [
+                        "types",
+                        "pmtVrnts"
+                      ]
+                    },
+                    "insurance": {
+                      "type": "object",
+                      "properties": {
+                        "types": {
+                          "type": "array",
+                          "uniqueItems": true,
+                          "minItems": 1,
+                          "items": {
+                            "required": [
+                              "tp",
+                              "cost",
+                              "cur",
+                              "payout"
+                            ],
+                            "properties": {
+                              "tp": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "cost": {
+                                "type": "number"
+                              },
+                              "cur": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "payouts": {
+                                "type": "array",
+                                "items": {
+                                  "properties": {}
+                                }
+                              },
+                              "policyTypes": {
+                                "type": "array",
+                                "uniqueItems": true,
+                                "minItems": 1,
+                                "items": {
+                                  "required": [
+                                    "tp",
+                                    "payout",
+                                    "cur"
+                                  ],
+                                  "properties": {
+                                    "tp": {
+                                      "type": "string",
+                                      "minLength": 1
+                                    },
+                                    "payout": {
+                                      "type": "number"
+                                    },
+                                    "cur": {
+                                      "type": "string",
+                                      "minLength": 1
+                                    }
+                                  }
+                                }
+                              },
+                              "payout": {
+                                "type": "number"
+                              }
+                            }
+                          }
+                        },
+                        "cur": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "pmtVrnts": {
+                          "type": "array",
+                          "uniqueItems": true,
+                          "minItems": 1,
+                          "items": {
+                            "required": [
+                              "tp",
+                              "tag"
+                            ],
+                            "properties": {
+                              "tp": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "tag": {
+                                "type": "string",
+                                "minLength": 1
+                              }
+                            }
+                          }
+                        },
+                        "src": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      },
+                      "required": [
+                        "types",
+                        "cur",
+                        "pmtVrnts",
+                        "src"
+                      ]
+                    },
+                    "return_packs": {
+                      "type": "object",
+                      "properties": {
+                        "types": {
+                          "type": "array",
+                          "uniqueItems": true,
+                          "minItems": 1,
+                          "items": {
+                            "required": [
+                              "tp",
+                              "amt",
+                              "src",
+                              "cur",
+                              "percentOfAmount"
+                            ],
+                            "properties": {
+                              "tp": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "amt": {
+                                "type": "number"
+                              },
+                              "src": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "cur": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "percentOfAmount": {
+                                "type": "number"
+                              }
+                            }
+                          }
+                        },
+                        "pmtVrnts": {
+                          "type": "array",
+                          "uniqueItems": true,
+                          "minItems": 1,
+                          "items": {
+                            "required": [
+                              "tp",
+                              "tag"
+                            ],
+                            "properties": {
+                              "tp": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "tag": {
+                                "type": "string",
+                                "minLength": 1
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "required": [
+                        "types",
+                        "pmtVrnts"
+                      ]
+                    },
+                    "all_inclusive": {
+                      "type": "object",
+                      "properties": {
+                        "types": {
+                          "type": "array",
+                          "uniqueItems": true,
+                          "minItems": 1,
+                          "items": {
+                            "required": [
+                              "tp",
+                              "amt",
+                              "src",
+                              "cur"
+                            ],
+                            "properties": {
+                              "tp": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "amt": {
+                                "type": "number"
+                              },
+                              "src": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "cur": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "subServices": {
+                                "type": "array",
+                                "uniqueItems": true,
+                                "minItems": 1,
+                                "items": {
+                                  "required": [
+                                    "serviceType",
+                                    "serviceSource",
+                                    "src"
+                                  ],
+                                  "properties": {
+                                    "serviceType": {
+                                      "type": "string",
+                                      "minLength": 1
+                                    },
+                                    "serviceSource": {
+                                      "type": "string",
+                                      "minLength": 1
+                                    },
+                                    "src": {
+                                      "type": "string",
+                                      "minLength": 1
+                                    },
+                                    "variant": {
+                                      "type": "object",
+                                      "properties": {
+                                        "tp": {
+                                          "type": "string",
+                                          "minLength": 1
+                                        },
+                                        "cost": {
+                                          "type": "number"
+                                        },
+                                        "cur": {
+                                          "type": "string",
+                                          "minLength": 1
+                                        },
+                                        "payouts": {
+                                          "type": "array",
+                                          "items": {
+                                            "properties": {}
+                                          }
+                                        },
+                                        "policyTypes": {
+                                          "type": "array",
+                                          "uniqueItems": true,
+                                          "minItems": 1,
+                                          "items": {
+                                            "required": [
+                                              "tp",
+                                              "payout",
+                                              "cur"
+                                            ],
+                                            "properties": {
+                                              "tp": {
+                                                "type": "string",
+                                                "minLength": 1
+                                              },
+                                              "payout": {
+                                                "type": "number"
+                                              },
+                                              "cur": {
+                                                "type": "string",
+                                                "minLength": 1
+                                              }
+                                            }
+                                          }
+                                        },
+                                        "payout": {
+                                          "type": "number"
+                                        },
+                                        "amt": {
+                                          "type": "number"
+                                        }
+                                      },
+                                      "required": [
+                                        "tp",
+                                        "cost",
+                                        "cur",
+                                        "payouts",
+                                        "policyTypes",
+                                        "payout",
+                                        "amt"
+                                      ]
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "pmtVrnts": {
+                          "type": "array",
+                          "uniqueItems": true,
+                          "minItems": 1,
+                          "items": {
+                            "required": [
+                              "tp",
+                              "tag"
+                            ],
+                            "properties": {
+                              "tp": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "tag": {
+                                "type": "string",
+                                "minLength": 1
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "required": [
+                        "types",
+                        "pmtVrnts"
+                      ]
+                    },
+                    "onlineCheckin": {
+                      "type": "object",
+                      "properties": {
+                        "types": {
+                          "type": "array",
+                          "uniqueItems": true,
+                          "minItems": 1,
+                          "items": {
+                            "required": [
+                              "tp",
+                              "src",
+                              "amt",
+                              "cur"
+                            ],
+                            "properties": {
+                              "tp": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "src": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "amt": {
+                                "type": "number"
+                              },
+                              "cur": {
+                                "type": "string",
+                                "minLength": 1
+                              }
+                            }
+                          }
+                        },
+                        "pmtVrnts": {
+                          "type": "array",
+                          "uniqueItems": true,
+                          "minItems": 1,
+                          "items": {
+                            "required": [
+                              "tp",
+                              "tag"
+                            ],
+                            "properties": {
+                              "tp": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "tag": {
+                                "type": "string",
+                                "minLength": 1
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "required": [
+                        "types",
+                        "pmtVrnts"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "notification",
+                    "insurance",
+                    "return_packs",
+                    "all_inclusive",
+                    "onlineCheckin"
+                  ]
+                },
+                "rebook": {
+                  "type": "boolean"
+                },
+                "reservationTTL": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "id",
+                "avail",
+                "trps",
+                "gdsInf",
+                "currencies",
+                "rates",
+                "src",
+                "bonus",
+                "bid",
+                "existingReservations",
+                "similarReservations",
+                "intersectReservations",
+                "oldReservations",
+                "createdByAuthorizedUser",
+                "reservations",
+                "agentCountry",
+                "pltCrr",
+                "lstTkDt",
+                "createAt",
+                "voidTimeUTC",
+                "srid",
+                "email",
+                "resellerId",
+                "customerLanguage",
+                "ipFrom",
+                "twoOW4RT",
+                "visitorId",
+                "is2GDS4RT",
+                "isMobile",
+                "fare_agent",
+                "hostEnv",
+                "orderPaymentValues",
+                "pmtVrnts",
+                "date",
+                "additionalServices",
+                "rebook",
+                "reservationTTL"
+              ]
+            }
+          }
+        },
+        "security": [],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "id",
+            "description": "Идентификатор брони",
+            "type": "string",
+            "required": true,
+            "enum": [
+              "0d2386b1-fcb5-4ef3-bb1e-85c777ecf9ba"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

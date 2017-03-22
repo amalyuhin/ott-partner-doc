@@ -1,0 +1,76 @@
+{
+  "swagger": "2.0",
+  "host": "ott-partner.dev.roowix.com",
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "info": {
+    "description": "Документация по методам для работы с OTT",
+    "title": "API документация для OTT",
+    "version": "0.0.1",
+    "termsOfService": "http://example.com/about/terms",
+    "contact": {
+      "name": "Denis",
+      "url": "http://example.com/contact",
+      "email": "apidocs@example.com"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://example.com"
+    }
+  },
+  "basePath": "/",
+  "paths": {
+    "/wl_api/process/startcreateorder/": {
+      "post": {
+        "description": "Запрос на создание заказа",
+        "summary": "Запрос на создание заказа",
+        "externalDocs": {
+          "description": "Find out more",
+          "url": "http://docs.example.com/management/apis/get/entities"
+        },
+        "operationId": "startcreateorder",
+        "tags": [
+          "avia"
+        ],
+        "produces": [
+          "application/json; charset=UTF-8"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "description": "",
+              "type": "object",
+              "properties": {
+                "status": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "processId": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "status",
+                "processId"
+              ]
+            }
+          }
+        },
+        "security": [],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Тело запроса",
+            "required": true,
+            "schema": "params={\"id\":\"0d2386b1-fcb5-4ef3-bb1e-85c777ecf9ba\"%2C\"newProcess\":true%2C\"confirmationId\":\"0d2386b1-fcb5-4ef3-bb1e-85c777ecf9ba\"%2C\"email\":\"dron16@inbox.ru\"%2C\"phone\":\"79232240278\"%2C\"creditCard\":{\"cvv\":\"123\"%2C\"number\":\"4111111111111111\"%2C\"expDate\":\"1118\"%2C\"holderName\":\"TEST\"}%2C\"reservations\":[{\"id\":\"c307c156-67f4-4a2e-9dfe-f0529b3fdaaa\"%2C\"passengers\":[{\"id\":0%2C\"firstName\":\"ANDREY\"%2C\"lastName\":\"MALYUKHIN\"%2C\"ageType\":\"ADT\"%2C\"passNumber\":\"5421387\"%2C\"birthDate\":\"19900303\"%2C\"gender\":\"M\"%2C\"passCountry\":\"RU\"%2C\"ourFirstName\":\"ANDREY\"%2C\"birthDate_Date\":\"1990-03-02T17:00:00.000Z\"%2C\"freqFlyerNumber\":\"\"}]%2C\"paymentVariant\":\"payture_vtb\"}]%2C\"additionalServices\":{}%2C\"agreements\":true%2C\"customerLanguage\":\"ru\"%2C\"useFullBonus\":false%2C\"testPg\":true%2C\"source\":\"vtb24\"}"
+          }
+        ]
+      }
+    }
+  }
+}

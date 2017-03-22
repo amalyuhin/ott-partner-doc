@@ -1,0 +1,106 @@
+{
+  "swagger": "2.0",
+  "host": "ott-partner.dev.roowix.com",
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "info": {
+    "description": "Документация по методам для работы с OTT",
+    "title": "API документация для OTT",
+    "version": "0.0.1",
+    "termsOfService": "http://example.com/about/terms",
+    "contact": {
+      "name": "Denis",
+      "url": "http://example.com/contact",
+      "email": "apidocs@example.com"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://example.com"
+    }
+  },
+  "basePath": "/",
+  "paths": {
+    "/wl_api/process/getprocessresult/": {
+      "get": {
+        "description": "Запрос на получение статуса процесса создания заказа (long-polling запрос, повторяется до тех пор пока не вернет статус, отличный от \"InProcess\")",
+        "summary": "Запрос на получение статуса процесса создания заказа ",
+        "externalDocs": {
+          "description": "Find out more",
+          "url": "http://docs.example.com/management/apis/get/entities"
+        },
+        "operationId": "uniqueId",
+        "tags": [
+          "avia"
+        ],
+        "produces": [
+          "application/json; charset=UTF-8"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "description": "Это конечный результат лонг полинг запроса в промежуточном состоянии возвращает {\"status\":\"InProcess\",\"created\":\"2017-03-21T08:45:45.678Z\"}",
+              "type": "object",
+              "properties": {
+                "number": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "errors": {
+                  "type": "array",
+                  "items": {
+                    "properties": {}
+                  }
+                },
+                "email": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "created": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "number",
+                "id",
+                "errors",
+                "email",
+                "created"
+              ]
+            }
+          }
+        },
+        "security": [],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "id",
+            "description": "Идентификатор созданного заказа",
+            "type": "string",
+            "required": true,
+            "enum": [
+              "6b2ac0f6-9bd2-481c-808e-a936421062a0"
+            ]
+          },
+          {
+            "in": "query",
+            "name": "source",
+            "description": "Источник заказа",
+            "type": "string",
+            "required": true,
+            "enum": [
+              "vtb24"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

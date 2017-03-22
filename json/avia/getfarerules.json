@@ -1,0 +1,170 @@
+{
+  "swagger": "2.0",
+  "host": "ott-partner.dev.roowix.com",
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "info": {
+    "description": "Документация по методам для работы с OTT",
+    "title": "API документация для OTT",
+    "version": "0.0.1",
+    "termsOfService": "http://example.com/about/terms",
+    "contact": {
+      "name": "Denis",
+      "url": "http://example.com/contact",
+      "email": "apidocs@example.com"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://example.com"
+    }
+  },
+  "basePath": "/",
+  "paths": {
+    "/wl_api/confirmation/getfarerules/": {
+      "post": {
+        "description": "Запрос на получения правил перелета, возврата и обмена",
+        "summary": "Запрос на получения правил перелета, возврата и обмена",
+        "externalDocs": {
+          "description": "Find out more",
+          "url": "http://docs.example.com/management/apis/get/entities"
+        },
+        "operationId": "uniqueId",
+        "tags": [
+          "api2swagger"
+        ],
+        "produces": [
+          "application/json; charset=UTF-8"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "description": "",
+              "type": "object",
+              "properties": {
+                "routes": {
+                  "type": "array",
+                  "uniqueItems": true,
+                  "minItems": 1,
+                  "items": {
+                    "required": [
+                      "from",
+                      "to",
+                      "startDate",
+                      "reservClass",
+                      "serviceClass",
+                      "airCompany",
+                      "flightNumber",
+                      "rules",
+                      "returnTaxes"
+                    ],
+                    "properties": {
+                      "from": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "to": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "startDate": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "reservClass": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "serviceClass": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "airCompany": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "flightNumber": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "rules": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "refund": {
+                        "type": "object",
+                        "properties": {
+                          "before": {
+                            "type": "boolean"
+                          },
+                          "after": {
+                            "type": "boolean"
+                          }
+                        },
+                        "required": [
+                          "before",
+                          "after"
+                        ]
+                      },
+                      "change": {
+                        "type": "object",
+                        "properties": {
+                          "before": {
+                            "type": "boolean"
+                          },
+                          "after": {
+                            "type": "boolean"
+                          }
+                        },
+                        "required": [
+                          "before",
+                          "after"
+                        ]
+                      },
+                      "returnTaxes": {
+                        "type": "boolean"
+                      }
+                    }
+                  }
+                },
+                "changeFeeAmount": {
+                  "type": "number"
+                },
+                "changeFeeCurrency": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "returnFeeAmount": {
+                  "type": "number"
+                },
+                "returnFeeCurrency": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "routes",
+                "changeFeeAmount",
+                "changeFeeCurrency",
+                "returnFeeAmount",
+                "returnFeeCurrency"
+              ]
+            }
+          }
+        },
+        "security": [],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "Тело запроса",
+            "description": "Request Payload Body",
+            "required": true,
+            "schema": "params={\"fareKey\":\"woHCjAcEwoxIw7FlwobDlMK0Oyo%2BwoBmw7XDg10gMsKtER3Cs8Omwq5yw7jCn1fCvAzDg3FpfcOSw7TCogdXwovDi8KZRMKmw40LOMOvG8OyTMKew43CiyLDhQLCuMODwqEIw4glwpNjwoHDnCgGY8KAwqZMPC7CkF7Cg8KBw6VQOUN1wp4aMg3CuMO6HMOFw7xUGCPDuinDn2Izw6QuwoHCiMKuwrLDogrCrFYpM8OObQdOw5xDEMKNB8Kaw5HDs8KHF8OXKsK6cSQKCnrDp3EhwoTCqwRGwpxrw5w2J8KTwpbCgsK8aMKKX1wJMw%3D%3D\"%2C\"gdsInfo\":\"pGkB10wptEBDgoMZTJgvAg%3D%3D\"%2C\"trips\":[{\"stDt\":\"20170330\"%2C\"stTm\":\"0850\"%2C\"endDate\":\"20170330\"%2C\"endTm\":\"1025\"%2C\"from\":\"DME\"%2C\"to\":\"LED\"%2C\"airCmp\":\"S7\"%2C\"fltNm\":\"15\"%2C\"conx\":false%2C\"stTrm\":\"\"%2C\"endTrm\":\"1\"%2C\"fltTm\":\"0135\"%2C\"jrnTm\":\"0135\"%2C\"confrm\":true%2C\"plane\":\"319\"%2C\"eTkAvail\":true%2C\"startDateTime\":\"2017-03-30T08:50:00\"%2C\"endDateTime\":\"2017-03-30T10:25:00\"%2C\"miles\":388%2C\"age\":166%2C\"stars\":8%2C\"flightInfo\":{\"ages\":{\"stars\":6%2C\"value\":166}%2C\"delay\":{\"stars\":10%2C\"value\":0}%2C\"delay15\":{\"value\":0%2C\"stars\":-1}%2C\"delay30\":{\"value\":0%2C\"stars\":-1}%2C\"late\":{\"stars\":10%2C\"value\":3.7}%2C\"cancelled\":{\"stars\":10%2C\"value\":0}%2C\"seatsmaxPE\":{\"value\":89%2C\"stars\":-1}%2C\"seatsmaxPB\":{\"value\":152%2C\"stars\":-1}%2C\"seatsminPB\":{\"value\":79%2C\"stars\":-1}%2C\"seatsminPE\":{\"value\":74%2C\"stars\":-1}}%2C\"key\":\"QsK%2BHcKMw7c%2BEkBvwo8wFMKRw7jCg1TDtcOPwpctw55Gw5jDuwLDgl/DkE88PXk%3D\"%2C\"cls\":\"W\"%2C\"reservClass\":\"W\"%2C\"srvCls\":\"E\"%2C\"serviceClass\":\"E\"%2C\"fic\":\"WBSOW\"%2C\"stAvl\":4%2C\"planeStr\":\"Airbus A319\"%2C\"oStartDate\":\"2017-03-30T08:50:00\"%2C\"oEndDate\":\"2017-03-30T10:25:00\"}]%2C\"source\":\"vtb24\"}"
+          }
+        ]
+      }
+    }
+  }
+}
