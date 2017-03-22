@@ -32,7 +32,7 @@
         },
         "operationId": "uniqueId",
         "tags": [
-          "api2swagger"
+          "avia"
         ],
         "produces": [
           "application/json; charset=UTF-8"

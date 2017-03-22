@@ -1,6 +1,6 @@
 {
   "swagger": "2.0",
-  "host": "ott-partner.dev.roowix.com",
+  "host": "partner.onetwotrip.com",
   "schemes": [
     "http",
     "https"
