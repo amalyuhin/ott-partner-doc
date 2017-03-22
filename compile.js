@@ -33,6 +33,7 @@ function makeAllDocs() {
     var success = true;
     glob( 'json/**/*.json', function( err, files ) {
         var itemCount = 0;
+        // Ходим по файлам с документацией
         files.forEach(function (file) {
             var data = require(path.resolve(__dirname, file));
             if (itemCount == 0) {
@@ -43,7 +44,11 @@ function makeAllDocs() {
             }
             itemCount++;
         });
+
+        // Очищаем старый файл с документацией и директорию yml
         clear();
+
+        // Пишем общий файл документации
         mkdirp('./json/avia/allDocs', function (err) {
             if (err) {
                 success = false;
@@ -56,6 +61,7 @@ function makeAllDocs() {
                     return console.error(err);
                 }
                 console.log('successful for all docs');
+                // Конвертируем в yml
                 json2yml();
             });
         });
@@ -70,7 +76,6 @@ function makeAllDocs() {
             }
         }
     }
-    return success;
 }
 
 
